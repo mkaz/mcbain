@@ -16,8 +16,8 @@
 }
 
 .editor-styles-wrapper > * {
-	font-family: 'Archivo', 'Helvetica Neue', sans-serif;
-	font-size: 17px;
+	font-family: 'Noto Serif', 'PT Serif', 'Droid Serif', Georgia, serif;
+	font-size: 18px;
 	-webkit-font-smoothing: antialiased;
 }
 
@@ -58,7 +58,7 @@
 
 .editor-post-title__block .editor-post-title__input {
 	color: #121212;
-	font-family: 'Archivo', 'Helvetica Neue', sans-serif;
+	font-family: 'Noto Serif', 'PT Serif', 'Droid Serif', Georgia, serif;
 	font-size: 36px;
 	font-weight: 600;
 	letter-spacing: -.45px;
@@ -314,7 +314,7 @@ blockquote {
 	display: block;
 	font-size: 1em;
 	font-style: normal;
-	font-weight: 700;
+	font-weight: 400;
 	margin: 0 0;
 	padding: 0 0 0 30px;
 	position: relative;
@@ -357,6 +357,11 @@ cite:before,
 .wp-block-quote.is-large,
 .wp-block-quote.is-style-large {
 	font-size: 1.25em;
+}
+
+.wp-block-quote p {
+	color: #A33300;
+	font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", sans-serif, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .wp-block-quote.is-large p,

@@ -70,7 +70,7 @@ add_action( 'wp_enqueue_scripts', function() {
 } );
 
 add_action( 'init', function() {
-	$editor_styles = array( 'assets/css/mcbain-classic-editor-styles.css' );
+	$editor_styles = array();
 	$editor_styles[] = '//fonts.googleapis.com/css?family=Noto+Serif:400,400i700&amp;subset=latin-ext';
 	add_editor_style( $editor_styles );
 } );
@@ -521,36 +521,18 @@ if ( ! function_exists( 'mcbain_add_block_editor_features' ) ) :
 endif;
 
 
-/* ---------------------------------------------------------------------------------------------
-   BLOCK EDITOR STYLES
-   --------------------------------------------------------------------------------------------- */
 
-if ( ! function_exists( 'mcbain_block_editor_styles' ) ) :
-	function mcbain_block_editor_styles() {
+add_action( 'enqueue_block_editor_assets', function() {
 
-		$dependencies = array();
-		$theme_version = wp_get_theme( 'mcbain' )->get( 'Version' );
+	$dependencies = array();
+	$theme_version = wp_get_theme( 'mcbain' )->get( 'Version' );
 
-		/**
-		 * Translators: If there are characters in your language that are not
-		 * supported by the theme fonts, translate this to 'off'. Do not translate
-		 * into your own language.
-		 */
-		$google_fonts = _x( 'on', 'Google Fonts: on or off', 'mcbain' );
+	wp_register_style( 'mcbain-block-editor-styles-font', '//fonts.googleapis.com/css?family=Noto+Serif:400,400i,700&amp;subset=latin-ext', false, 1.0, 'all' );
+	$dependencies[] = 'mcbain-block-editor-styles-font';
 
-		if ( 'off' !== $google_fonts ) {
+	// Enqueue the editor styles
+	wp_enqueue_style( 'mcbain-block-editor-styles', get_theme_file_uri( '/style-editor.css' ), $dependencies, $theme_version, 'all' );
 
-			// Register Google Fonts
-			wp_register_style( 'mcbain-block-editor-styles-font', '//fonts.googleapis.com/css?family=Archivo:400,400i,600,600i,700,700i&amp;subset=latin-ext', false, 1.0, 'all' );
-			$dependencies[] = 'mcbain-block-editor-styles-font';
-
-		}
-
-		// Enqueue the editor styles
-		wp_enqueue_style( 'mcbain-block-editor-styles', get_theme_file_uri( '/assets/css/mcbain-block-editor-styles.css' ), $dependencies, $theme_version, 'all' );
-
-	}
-	add_action( 'enqueue_block_editor_assets', 'mcbain_block_editor_styles', 1 );
-endif;
+} );
 
 ?>

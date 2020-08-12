@@ -99,8 +99,8 @@ body {
     background: #fff;
 	border: none;
     color: #121212;
-	font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", sans-serif, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-	font-size: 18px;
+	font-family: "Noto Serif", "PT Serif", "Droid Serif", Georgia, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-size: 16px;
 	padding-left: 380px;
 }
 
@@ -170,8 +170,8 @@ a {
 }
 
 .entry-title {
-	font-size: 36px;
-	font-weight: 600;
+	font-size: 32px;
+	font-weight: 700;
 	letter-spacing: -.45px;
 	line-height: 1.25;
 	margin: 0;
@@ -275,17 +275,17 @@ h3,
 h4,
 h5,
 h6 {
-	font-weight: 600;
+	font-weight: 700;
 	line-height: 1.2;
 	margin: 60px 0 30px;
 }
 
-h1 { font-size: 40px; }
-h2 { font-size: 32px; }
-h3 { font-size: 28px; }
-h4 { font-size: 24px; }
-h5 { font-size: 20px; }
-h6 { font-size: 18px; }
+h1 { font-size: 32px; }
+h2 { font-size: 28px; }
+h3 { font-size: 24px; }
+h4 { font-size: 20px; }
+h5 { font-size: 18px; }
+h6 { font-size: 16px; }
 
 fieldset {
     border: 1px solid rgba( 0, 0, 0, .2 );
@@ -294,7 +294,7 @@ fieldset {
 
 fieldset legend {
     font-size: 16px;
-	font-weight: 600;
+	font-weight: 700;
 	margin-left: -15px;
 	padding: 0 15px;
 }
@@ -354,7 +354,7 @@ input[type="submit"] {
     display: inline-block;
 	font-family: inherit;
 	font-size: 16px;
-	font-weight: 600;
+	font-weight: 700;
     padding: 16px 24px 16px;
 	text-align: center;
 	text-decoration: none;
@@ -407,7 +407,7 @@ thead {
 }
 
 th {
-	font-weight: 600;
+	font-weight: 700;
 }
 
 tbody > tr:nth-child(odd) {
@@ -423,12 +423,15 @@ blockquote {
 }
 
 blockquote p {
-	font-weight: 700;
+	font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", sans-serif, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-weight: 400;
+	color: #A33300;
 	hanging-punctuation: first;
 }
 
 blockquote cite {
 	display: block;
+	color: #121212;
 	font-style: normal;
 	margin: 1em 0 0;
 }
@@ -834,7 +837,7 @@ figure {
 
 .post-pagination a {
 	display: block;
-	font-weight: 600;
+	font-weight: 700;
 	position: relative;
 	text-decoration: none;
 		-ms-word-break: break-word;
@@ -971,7 +974,7 @@ figure {
 }
 
 .comment-author cite {
-	font-weight: 600;
+	font-weight: 700;
 }
 
 .comment-author cite a { text-decoration: underline; }
@@ -1089,7 +1092,7 @@ figure {
 	border-bottom: 1px solid transparent;
 	color: #121212;
 	font-size: 1em;
-	font-weight: 600;
+	font-weight: 700;
 	padding: 0 25px 0 0;
 	transition: border-color .15s linear;
 }
@@ -1112,7 +1115,7 @@ figure {
 .comments .comment-respond .comment-reply-title small a {
 	color: #999;
 	font-size: 0.8em;
-	font-weight: 600;
+	font-weight: 700;
 	margin-left: 5px;
 }
 
