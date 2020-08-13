@@ -777,7 +777,7 @@ figure {
 
 .meta {
 	color: rgba( 0, 0, 4, 0.4 );
-	margin-top: 25px;
+	margin-top: 8px;
 }
 
 .meta > * + * {
