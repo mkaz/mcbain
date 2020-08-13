@@ -1758,10 +1758,6 @@ input.search-field::-moz-placeholder { color: #121212; }
 		width: 100%;
 	}
 
-	.entry-content {
-		padding-left: 200px;
-	}
-
 }
 
 @media ( max-width: 750px ) {
