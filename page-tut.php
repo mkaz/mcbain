@@ -93,31 +93,6 @@ if ( $parent->have_posts() ) : ?>
 </ul>
 </div><!-- .menu-wrapper -->
 
-<?php if ( has_nav_menu( 'social-menu' ) || ( ! get_theme_mod( 'mcbain_hide_social' ) || is_customize_preview() ) ) : ?>
-
-	<div class="social-menu desktop">
-		<ul class="social-menu-inner">
-			<li class="social-search-wrapper"><a href="<?php echo esc_url( home_url( '?s=' ) ); ?>"></a></li>
-			<?php
-
-			$social_args = array(
-				'theme_location'	=> 'social-menu',
-				'container'			=> '',
-				'container_class'	=> 'menu-social group',
-				'items_wrap'		=> '%3$s',
-				'menu_id'			=> 'menu-social-items',
-				'menu_class'		=> 'menu-items',
-				'depth'				=> 1,
-				'link_before'		=> '<span class="screen-reader-text">',
-				'link_after'		=> '</span>',
-				'fallback_cb'		=> '',
-			);
-
-			wp_nav_menu( $social_args );
-			?>
-		</ul>
-	</div>
-<?php endif; ?>
 
 </header>
 
@@ -145,24 +120,6 @@ if ( $parent->have_posts() ) : ?>
 		<?php wp_reset_postdata(); ?>
 	</ul>
 </div>
-
-<?php if ( ! get_theme_mod( 'mcbain_hide_social', false ) ) : ?>
-
-<div class="mobile-search">
-	<div class="untoggle-mobile-search"></div>
-
-	<?php get_search_form(); ?>
-
-	<div class="mobile-results">
-		<div class="results-wrapper"></div>
-	</div>
-</div>
-
-<div class="search-overlay">
-	<?php get_search_form(); ?>
-</div>
-
-<?php endif; ?>
 
 <main class="site-content" id="site-content">
 	<article <?php post_class(); ?>>

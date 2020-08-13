@@ -85,17 +85,13 @@ if ( have_posts() ) :
 
 				<div class="comments-section-inner section-inner">
 					<?php comments_template(); ?>
-				</div><!-- .comments-section-inner -->
+				</div>
 
 			<?php endif; ?>
 
-		</div> <!-- .post -->
+		</div>
 
 		<?php
-
-		if ( $post_type == 'post' ) {
-			get_template_part( 'related-posts' );
-		}
 
 	endwhile;
 

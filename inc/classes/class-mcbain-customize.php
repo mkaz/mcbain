@@ -75,20 +75,6 @@ if ( ! class_exists( 'McBain_Customize' ) ) :
 				'description' 	=> __( 'Whether to hide the social buttons and the search overlay button.', 'mcbain' ),
 			) );
 
-			// Hide related posts
-			$wp_customize->add_setting( 'mcbain_hide_related_posts', array(
-				'capability' 		=> 'edit_theme_options',
-				'sanitize_callback' => 'mcbain_sanitize_checkbox',
-				'transport'			=> 'postMessage',
-			) );
-
-			$wp_customize->add_control( 'mcbain_hide_related_posts', array(
-				'type' 			=> 'checkbox',
-				'section' 		=> 'mcbain_options',
-				'label' 		=> __( 'Hide Related Posts', 'mcbain' ),
-				'description' 	=> __( 'Whether to hide the related posts section on single posts.', 'mcbain' ),
-			) );
-
 			// Decide order of month + day in post previews
 			$wp_customize->add_setting( 'mcbain_preview_date_format', array(
 				'capability' 		=> 'edit_theme_options',

@@ -876,74 +876,20 @@ figure {
 }
 
 .comments,
-.comment-respond,
-.related-posts {
+.comment-respond {
 	border-top: 1px solid rgba( 0, 0, 4, 0.125 );
 	margin: 100px auto 0 auto;
 	padding: 30px 0 0 34.125%;
 	position: relative;
 }
 
-.comment-reply-title,
-.related-posts-title {
+.comment-reply-title {
 	font-size: inherit;
 	margin: 0;
 	position: absolute;
 		left: 0;
 		top: 30px;
 	width: calc( 34.125% - 20px );
-}
-
-.related-post-image {
-	background-color: rgba( 0, 0, 4, 0.1 );
-}
-
-.related-posts {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	margin-bottom: -20px;
-}
-
-.related-post {
-	float: left;
-	margin-bottom: 25px;
-	width: calc( 50% - 10px );
-}
-
-.related-post-image {
-	margin-bottom: 10px;
-}
-
-.related-post-image img {
-	display: none;
-}
-
-.related-post-image:before {
-	content: "";
-	display: block;
-	padding-bottom: 62.5%;
-	width: 100%;
-}
-
-.related-post .title {
-	font-size: inherit;
-	font-weight: inherit;
-	line-height: 1.25;
-	margin: 0;
-		-ms-word-break: break-word;
-	word-break: break-word;
-}
-
-.related-post .title span {
-	border-bottom: 1px solid transparent;
-	transition: border-color .15s linear;
-}
-
-.related-post { text-decoration: none; }
-
-.related-post:hover .title span {
-	border-bottom-color: #121212;
 }
 
 .comment,
@@ -1761,20 +1707,6 @@ input.search-field::-moz-placeholder { color: #121212; }
 	input.search-field:-ms-input-placeholder { color: rgba( 255, 255, 255, 0.6 ); }
 	input.search-field::-moz-placeholder { color: rgba( 255, 255, 255, 0.6 ); }
 
-	.resume-template .entry-content {
-		padding-left: 300px;
-	}
-
-	.resume-template .entry-content h1,
-	.resume-template .entry-content h2,
-	.resume-template .entry-content h3,
-	.resume-template .entry-content h4,
-	.resume-template .entry-content h5,
-	.resume-template .entry-content h6 {
-		margin: 80px 0 -28px -300px;
-		padding: 50px calc( 100% - 20px ) 0 0;
-	}
-
 	.entry-content .alignfull {
 		margin-left: calc( 50% - 50vw );
 		max-width: 100vw;
@@ -1814,32 +1746,20 @@ input.search-field::-moz-placeholder { color: #121212; }
 
 	.comments,
 	.comment-respond,
-	#respond,
-	.related-posts {
+	#respond {
 		margin-top: 80px;
 		max-width: 560px;
 		padding: 25px 0 0 0;
 	}
 
-	.comment-reply-title,
-	.related-posts-title {
+	.comment-reply-title {
 		margin-bottom: 40px;
 		position: static;
 		width: 100%;
 	}
 
-	.resume-template .entry-content {
+	.entry-content {
 		padding-left: 200px;
-	}
-
-	.resume-template .entry-content h1,
-	.resume-template .entry-content h2,
-	.resume-template .entry-content h3,
-	.resume-template .entry-content h4,
-	.resume-template .entry-content h5,
-	.resume-template .entry-content h6 {
-		margin: 80px 0 -28px -200px;
-		padding: 50px calc( 100% - 20px ) 0 0;
 	}
 
 }
@@ -1949,8 +1869,7 @@ input.search-field::-moz-placeholder { color: #121212; }
 	}
 
 	.comments,
-	.comment-respond,
-	.related-posts {
+	.comment-respond {
 		margin-top: 50px;
 	}
 
@@ -2013,21 +1932,6 @@ input.search-field::-moz-placeholder { color: #121212; }
 		float: none;
 		margin: 20px 0 0;
 		width: 100%;
-	}
-
-	.resume-template .entry-content {
-		padding-left: 0;
-	}
-
-	.resume-template .entry-content h1,
-	.resume-template .entry-content h2,
-	.resume-template .entry-content h3,
-	.resume-template .entry-content h4,
-	.resume-template .entry-content h5,
-	.resume-template .entry-content h6 {
-		font-size: 20px;
-		margin: 50px 0 23px 0;
-		padding: 24px 0 0;
 	}
 
 	.site-footer {
@@ -2110,27 +2014,13 @@ input.search-field::-moz-placeholder { color: #121212; }
 	}
 
 	.comments,
-	.comment-respond,
-	.related-posts {
+	.comment-respond {
 		margin: 50px 0 0;
 		padding: 15px 0 0 0;
 	}
 
-	.comment-reply-title,
-	.related-posts-title {
+	.comment-reply-title {
 		margin-bottom: 25px;
-	}
-
-	.related-post {
-		display: flex;
-		margin: 0 0 15px 0;
-		width: 100%;
-	}
-
-	.related-post-image {
-		height: 80px;
-		margin: 0 12px 0 0;
-		min-width: 80px;
 	}
 
 	.entry-content .alignnone,
@@ -2210,11 +2100,6 @@ input.search-field::-moz-placeholder { color: #121212; }
 	.entry-content h5,
 	.entry-content h6 {
 		margin: 40px 0 20px;
-	}
-
-	.resume-template .entry-content h1, .resume-template .entry-content h2, .resume-template .entry-content h3, .resume-template .entry-content h4, .resume-template .entry-content h5, .resume-template .entry-content h6 {
-		margin: 40px 0 20px 0;
-		padding: 21px 0 0;
 	}
 
 	.comment-meta .comment-author {
