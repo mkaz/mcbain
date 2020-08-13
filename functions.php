@@ -62,21 +62,10 @@ add_action( 'wp_enqueue_scripts', function() {
 	$dependencies = array();
 	$theme_version = wp_get_theme( 'mcbain' )->get( 'Version' );
 
-	// Register Google Fonts
-	wp_register_style( 'mcbain-fonts', '//fonts.googleapis.com/css?family=Noto+Serif:400,400i,700&amp;subset=latin-ext', false, 1.0, 'all' );
-	$dependencies[] = 'mcbain-fonts';
-
 	wp_enqueue_style( 'mcbain-style', get_template_directory_uri() . '/style.css', $dependencies, $theme_version );
 } );
 
-add_action( 'init', function() {
-	$editor_styles = array();
-	$editor_styles[] = '//fonts.googleapis.com/css?family=Noto+Serif:400,400i700&amp;subset=latin-ext';
-	add_editor_style( $editor_styles );
-} );
-
 add_filter( 'use_default_gallery_style', '__return_false' );
-
 
 add_action( 'wp_enqueue_scripts', function() {
 
@@ -524,14 +513,16 @@ endif;
 
 add_action( 'enqueue_block_editor_assets', function() {
 
-	$dependencies = array();
 	$theme_version = wp_get_theme( 'mcbain' )->get( 'Version' );
 
-	wp_register_style( 'mcbain-block-editor-styles-font', '//fonts.googleapis.com/css?family=Noto+Serif:400,400i,700&amp;subset=latin-ext', false, 1.0, 'all' );
-	$dependencies[] = 'mcbain-block-editor-styles-font';
-
 	// Enqueue the editor styles
-	wp_enqueue_style( 'mcbain-block-editor-styles', get_theme_file_uri( '/style-editor.css' ), $dependencies, $theme_version, 'all' );
+	wp_enqueue_style(
+		'mcbain-block-editor-styles',
+		get_theme_file_uri( '/style-editor.css' ),
+		array(),
+		$theme_version,
+		'all'
+	);
 
 } );
 
