@@ -14,6 +14,9 @@
 	All files, unless otherwise stated, are released under the GNU General Public License
 	version 2.0 (http://www.gnu.org/licenses/gpl-2.0.html)
 */
+html {
+	font-size: 18px;
+}
 
 html, body {
     margin: 0;
@@ -99,8 +102,8 @@ body {
     background: #fff;
 	border: none;
     color: #121212;
+	font-size: 1.0rem;
 	font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", sans-serif, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-	font-size: 18px;
 	padding-left: 380px;
 }
 
@@ -115,7 +118,6 @@ body * {
         -moz-box-sizing: border-box;
 	box-sizing: border-box;
 	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
 }
 
 a {
@@ -415,16 +417,16 @@ tbody > tr:nth-child(odd) {
 }
 
 blockquote {
-	border-color: currentColor;
-	border-style: solid;
+	border-color: #CB4C00;
+	border-style: dotted;
 	border-width: 0 0 0 2px;
-    margin: 0 0 30px 0;
+    margin: 0 8% 30px 8%;
     padding: 0 0 0 20px;
 }
 
 blockquote p {
 	font-weight: 400;
-	color: #A33300;
+	color: #CB4C00;
 	hanging-punctuation: first;
 }
 
@@ -451,8 +453,9 @@ figure {
 .gallery-caption,
 .wp-caption-text,
 :root figcaption {
-    font-size: 0.9em;
-	margin: 15px 0 0;
+    font-size: 0.8333rem;
+	margin: 8px 0 0;
+	color: #666666;
 }
 
 :root .gallery-caption,
@@ -612,7 +615,7 @@ figure {
 }
 
 .page-header {
-	padding: 80px 0;
+	padding: 2.6667rem 0;
 }
 
 .page-header:last-child {
@@ -627,8 +630,8 @@ figure {
 }
 
 .page-title {
-	font-size: 24px;
-	font-weight: inherit;
+	font-size: 1.3333rem;
+	font-weight: 700;
 	hanging-punctuation: first;
 	line-height: 1.45;
 	margin: 0;
@@ -756,7 +759,8 @@ figure {
 }
 
 .filter-list {
-	font-size: 1.0rem;
+	font-size: 0.8333rem;
+	margin-top: 8px;
 }
 
 .filter-list span {
@@ -768,7 +772,7 @@ figure {
 }
 
 .entry-header {
-	margin: 80px auto 60px;
+	margin: 3rem auto 2.5rem auto;
 }
 
 .entry-header .excerpt {
@@ -1208,6 +1212,10 @@ figure {
 
 .entry-content ul.wp-block-gallery > li:last-child {
 	margin-bottom: 16px;
+}
+
+.wp-block-image figcaption {
+	text-align: center;
 }
 
 .wp-block-image .aligncenter > figcaption,
@@ -2028,7 +2036,7 @@ input.search-field::-moz-placeholder { color: #121212; }
 	}
 
 	.page-header {
-		padding: 50px 0;
+		padding: 2.2222rem 0;
 	}
 
 	.page-subtitle {
