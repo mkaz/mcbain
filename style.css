@@ -257,13 +257,16 @@ dd + dt {
 	margin-top: 15px;
 }
 
+
+pre, code {
+	font-family: Hack, SFMono-Regular, Consolas, "Liberation Mono", Menlo, Inconsolata, "Courier New", monospace;
+}
+
 code {
-	background: #f1f1f4;
 	padding: 0 1px;
 }
 
 pre {
-	background: #f1f1f4;
 	font-size: 14px;
 	line-height: 1.5;
 	padding: 20px;
