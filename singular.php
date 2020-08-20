@@ -27,7 +27,31 @@ if ( have_posts() ) :
 				if ( is_single() || is_attachment() ) : ?>
 
 					<div class="meta">
-						<time><a href="<?php the_permalink(); ?>"><?php the_time( get_option( 'date_format' ) ); ?></a></time>
+						<?php
+							if ( get_the_time( 'Ymd' ) !== get_the_modified_time( 'Ymd' ) ) {
+								$label = "Updated: ";
+								$time_string = sprintf(
+									'<time class="entry-date updated" datetime="%1$s">%2$s</time>',
+									esc_attr( get_the_modified_date( DATE_W3C ) ),
+									esc_html( get_the_modified_date() )
+								);
+							} else {
+								$label = "Created: ";
+								$time_string = sprintf(
+									'<time class="entry-date published" datetime="%1$s">%2$s</time>',
+									esc_attr( get_the_date( DATE_W3C ) ),
+									esc_html( get_the_date() )
+								);
+							}
+
+							printf(
+								'<span class="posted-on">%1$s<a href="%2$s" rel="bookmark">%3$s</a></span>',
+								$label,
+								esc_url( get_permalink() ),
+								$time_string
+							);
+						?>
+
 						<?php if ( ! is_attachment() ) : ?>
 							<span>
 								<?php
