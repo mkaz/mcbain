@@ -25,6 +25,11 @@ html, body {
     min-height: 100%;
 }
 
+::selection {
+	color: #121212;
+	background: #FFFF66;
+}
+
 h1, h2, h3, h4, h5, h6, p, blockquote, address, big, cite, code, em, font, img, small, strike, sub, sup, li, ol, ul, fieldset, form, label, legend, button, table, caption, tr, th, td {
 	font-size: inherit;
 	line-height: inherit;
@@ -142,11 +147,6 @@ img {
 	clear: both;
 	content: "";
 	display: block;
-}
-
-::selection {
-	background: #121212;
-	color: #FFF;
 }
 
 input::-webkit-input-placeholder { color: rgba( 0, 0, 4, 0.4 ); }
