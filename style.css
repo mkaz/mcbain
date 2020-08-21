@@ -15,7 +15,7 @@
 	version 2.0 (http://www.gnu.org/licenses/gpl-2.0.html)
 */
 html {
-	font-size: 18px;
+	font-size: 1.0rem;
 }
 
 html, body {
@@ -65,7 +65,7 @@ input[type="search"]::-webkit-search-results-decoration {
 	clip: auto !important;
 	color: #21759b;
 	display: block;
-	font-size: 14px;
+	font-size: 0.7778rem;
 	font-weight: 700;
 	height: auto;
 	left: 5px;
@@ -172,7 +172,7 @@ a {
 }
 
 .entry-title {
-	font-size: 32px;
+	font-size: 1.7778rem;
 	font-weight: 700;
 	letter-spacing: -.45px;
 	line-height: 1.25;
@@ -182,7 +182,7 @@ a {
 }
 
 .excerpt {
-	font-size: 24px;
+	font-size: 1.3333rem;
 	line-height: 1.45;
 }
 
@@ -267,7 +267,7 @@ code {
 }
 
 pre {
-	font-size: 14px;
+	font-size: 0.7778rem;
 	line-height: 1.5;
 	padding: 20px;
 	white-space: pre-wrap;
@@ -289,12 +289,12 @@ h6 {
 	margin: 60px 0 30px;
 }
 
-h1 { font-size: 32px; }
-h2 { font-size: 28px; }
-h3 { font-size: 24px; }
-h4 { font-size: 20px; }
-h5 { font-size: 18px; }
-h6 { font-size: 16px; }
+h1 { font-size: 1.7778rem; }
+h2 { font-size: 1.5556rem; }
+h3 { font-size: 1.3333rem; }
+h4 { font-size: 1.1111rem; }
+h5 { font-size: 1.0rem; }
+h6 { font-size: 0.8889rem; }
 
 fieldset {
     border: 1px solid rgba( 0, 0, 0, .2 );
@@ -302,7 +302,7 @@ fieldset {
 }
 
 fieldset legend {
-    font-size: 16px;
+    font-size: 0.8889rem;
 	font-weight: 700;
 	margin-left: -15px;
 	padding: 0 15px;
@@ -362,7 +362,7 @@ input[type="submit"] {
     color: #fff;
     display: inline-block;
 	font-family: inherit;
-	font-size: 16px;
+	font-size: 0.8889rem;
 	font-weight: 700;
     padding: 16px 24px 16px;
 	text-align: center;
@@ -387,7 +387,7 @@ table {
 	border-collapse: collapse;
     border-spacing: 0;
     empty-cells: show;
-    font-size: 0.9em;
+    font-size: 0.8889rem;
     margin-bottom: 30px;
     max-width: 100%;
     overflow: hidden;
@@ -403,7 +403,7 @@ td {
 }
 
 caption {
-	font-size: 13px;
+	font-size: 0.7778rem;
 	font-weight: 700;
     padding-bottom: 2.5%;
 	text-align: center;
@@ -506,7 +506,7 @@ figure {
 }
 
 .site-title {
-	font-size: 24px;
+	font-size: 1.3333rem;
 	font-weight: 700;
 	margin: 0;
 }
@@ -831,7 +831,7 @@ figure {
 
 .post-pagination {
 	display: flex;
-	font-size: 18px;
+	font-size: 1.0rem;
 	justify-content: space-between;
 	margin-top: 100px;
 }
@@ -961,7 +961,7 @@ figure {
 }
 
 .comment .reply {
-    font-size: 14px;
+    font-size: 0.7778rem;
 	letter-spacing: 0.05em;
     margin-top: 22px;
     text-transform: uppercase;
@@ -1034,7 +1034,7 @@ figure {
 
 .comment-respond input[type="checkbox"] + label {
 	display: inline;
-	font-size: 14px;
+	font-size: 0.7778rem;
 	margin: 0 0 0 5px;
 }
 
@@ -1143,7 +1143,7 @@ figure {
 :root .has-white-color a:hover { color: #fff; }
 :root .has-white-background-color { background-color: #fff; }
 
-:root .has-small-font-size { font-size: .842em; }
+:root .has-small-font-size { font-size: .8333rem; }
 :root .has-regular-font-size,
 :root .has-normal-font-size { font-size: 1em; }
 
@@ -1152,8 +1152,8 @@ figure {
 	line-height: 1.5;
 }
 
-:root .has-large-font-size { font-size: 1.33em; }
-:root .has-larger-font-size { font-size: 1.55em; }
+:root .has-large-font-size { font-size: 1.3333em; }
+:root .has-larger-font-size { font-size: 1.5556em; }
 
 .wp-block-audio audio {
 	width: 100%;
@@ -1258,7 +1258,7 @@ figure {
 .wp-block-pullquote blockquote p,
 .wp-block-pullquote.alignleft blockquote p,
 .wp-block-pullquote.alignright blockquote p {
-	font-size: 1.25em;
+	font-size: 1.2222rem;
 	font-weight: 700;
 	letter-spacing: -0.025em;
 	margin-bottom: 1em;
@@ -1275,7 +1275,7 @@ figure {
 }
 
 .wp-block-pullquote.is-style-solid-color blockquote p {
-	font-size: 1.25em;
+	font-size: 1.2222rem;
 }
 
 .wp-social-link {
@@ -1307,7 +1307,7 @@ figure {
 
 .wp-block-quote.is-large p,
 .wp-block-quote.is-style-large p {
-	font-size: 1.25em;
+	font-size: 1.2222rem;
 	font-style: normal;
 	line-height: 1.5;
 }
@@ -1386,7 +1386,7 @@ p.has-drop-cap:not(:focus):first-letter {
 }
 
 .entry-content .pull {
-	font-size: 29px;
+	font-size: 1.5556rem;
 	font-weight: 700;
 	letter-spacing: -0.02em;
 	line-height: 1.2;
@@ -1507,7 +1507,7 @@ input.search-field::-moz-placeholder { color: #121212; }
 .search-overlay .search-field {
 	background-size: 44px auto;
 	border-bottom: none;
-	font-size: 32px;
+	font-size: 1.7778rem;
 	padding: 24px 0 24px 69px;
 	width: 450px;
 }
@@ -1515,7 +1515,7 @@ input.search-field::-moz-placeholder { color: #121212; }
 .site-footer {
 	border-top: 1px solid rgba( 0, 0, 4, 0.125 );
 	display: flex;
-	font-size: 16px;
+	font-size: 0.8889rem;
 	justify-content: space-between;
 	margin-top: 100px;
 	max-width: 800px;
@@ -1682,13 +1682,13 @@ input.search-field::-moz-placeholder { color: #121212; }
 	}
 
 	.mobile-results .no-results-message {
-		font-size: 16px;
+		font-size: 0.8889rem;
 		line-height: 1.35;
 	}
 
 	.mobile-results p {
 		color: rgba( 255, 255, 255, 0.5 );
-		font-size: 13px;
+		font-size: 0.7778rem;
 		margin: 0;
 	}
 
@@ -1701,7 +1701,7 @@ input.search-field::-moz-placeholder { color: #121212; }
 	.mobile-results li a {
 		color: #fff;
 		display: block;
-		font-size: 16px;
+		font-size: 0.8889rem;
 		line-height: 1.25;
 		padding: 15px 0;
 	}
@@ -1709,7 +1709,7 @@ input.search-field::-moz-placeholder { color: #121212; }
 	.mobile-results .show-all {
 		color: rgba( 255, 255, 255, 0.5 );
 		display: block;
-		font-size: 13px;
+		font-size: 0.7778rem;
 		margin-top: 15px;
 		text-align: right;
 	}
@@ -1815,7 +1815,7 @@ input.search-field::-moz-placeholder { color: #121212; }
 	.gallery-columns-2 .gallery-caption,
 	.gallery-columns-3 .gallery-caption {
 		bottom: 10px;
-		font-size: 12px;
+		font-size: 0.7778rem;
 		left: 20px;
 		max-width: calc( 100% - 40px );
 	}
@@ -1855,11 +1855,11 @@ input.search-field::-moz-placeholder { color: #121212; }
 	}
 
 	.site-nav ul:first-child li {
-		font-size: 30px;
+		font-size: 1.5556rem;
 	}
 
 	.site-nav ul + ul li {
-		font-size: 20px;
+		font-size: 1.111rem;
 		font-weight: 400;
 	}
 
@@ -1965,11 +1965,11 @@ input.search-field::-moz-placeholder { color: #121212; }
 @media ( max-width: 500px ) {
 
 	body {
-		font-size: 16px;
+		font-size: 0.888rem;
 	}
 
 	.excerpt {
-		font-size: 18px;
+		font-size: 1.0rem;
 	}
 
 	h1,
@@ -1981,11 +1981,11 @@ input.search-field::-moz-placeholder { color: #121212; }
 		margin: 40px 0 20px;
 	}
 
-	h1 { font-size: 28px; }
-	h2 { font-size: 26px; }
-	h3 { font-size: 24px; }
-	h4 { font-size: 20px; }
-	h5 { font-size: 18px; }
+	h1 { font-size: 1.5556rem; }
+	h2 { font-size: 1.4444rem; }
+	h3 { font-size: 1.3333rem; }
+	h4 { font-size: 1.1111rem; }
+	h5 { font-size: 1.0rem; }
 
 	.main-menu {
 		margin-top: 40px;
@@ -1996,7 +1996,7 @@ input.search-field::-moz-placeholder { color: #121212; }
 	}
 
 	.entry-title {
-		font-size: 24px;
+		font-size: 1.333rem;
 	}
 
 	.entry-header .excerpt {
@@ -2047,11 +2047,11 @@ input.search-field::-moz-placeholder { color: #121212; }
 	}
 
 	.page-subtitle {
-		font-size: 16px;
+		font-size: 0.8889rem;
 	}
 
 	.page-title {
-		font-size: 20px;
+		font-size: 1.1111rem;
 	}
 
 	.posts:first-child {
