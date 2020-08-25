@@ -71,8 +71,6 @@ add_action( 'wp_enqueue_scripts', function() {
 
 	$theme_version = wp_get_theme( 'mcbain' )->get( 'Version' );
 
-	wp_enqueue_script( 'mcbain_global', get_template_directory_uri() . '/assets/js/global.js', array(), $theme_version, true );
-
 	// Enqueue comment reply
 	if ( ( ! is_admin() ) && is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -93,11 +91,6 @@ add_action( 'body_class', function( $classes ) {
 	// Check whether we're in the customizer preview
 	if ( is_customize_preview() ) {
 		$classes[] = 'customizer-preview';
-	}
-
-	// Hide social buttons
-	if ( get_theme_mod( 'mcbain_hide_social' ) ) {
-		$classes[] = 'hide-social';
 	}
 
 	// White bg class
@@ -123,75 +116,20 @@ add_action( 'body_class', function( $classes ) {
 	return $classes;
 } );
 
-
-
 /*	-----------------------------------------------------------------------------------------------
-	AJAX SEARCH RESULTS
-	This function is called to load ajax search results on mobile.
+	WIDGETS
 --------------------------------------------------------------------------------------------------- */
 
-
-if ( ! function_exists( 'mcbain_ajax_results' ) ) {
-	function mcbain_ajax_results() {
-
-		$string = json_decode( stripslashes( $_POST['query_data'] ), true );
-
-		if ( $string ) :
-
-			$args = array(
-				's'					=> $string,
-				'posts_per_page'	=> 5,
-				'post_status'		=> 'publish',
-			);
-
-			$ajax_query = new WP_Query( $args );
-
-			if ( $ajax_query->have_posts() ) {
-
-				?>
-
-				<p class="results-title"><?php _e( 'Search Results', 'mcbain' ); ?></p>
-
-				<ul>
-
-					<?php
-
-					// Custom loop
-					while ( $ajax_query->have_posts() ) :
-
-						$ajax_query->the_post();
-
-						// Load the appropriate content template
-						get_template_part( 'content-mobile-search' );
-
-					// End the loop
-					endwhile;
-
-					?>
-
-				</ul>
-
-				<?php if ( $ajax_query->max_num_pages > 1 ) : ?>
-
-					<a class="show-all" href="<?php echo esc_url( home_url( '?s=' . $string ) ); ?>"><?php _e( 'Show all', 'mcbain' ); ?></a>
-
-				<?php endif; ?>
-
-				<?php
-
-			} else {
-
-				echo '<p class="no-results-message">' . __( 'We could not find anything that matches your search query. Please try again.', 'mcbain' ) . '</p>';
-
-			} // End if().
-
-		endif; // End if().
-
-		die();
-	}
-} // End if().
-add_action( 'wp_ajax_nopriv_ajax_pagination', 'mcbain_ajax_results' );
-add_action( 'wp_ajax_ajax_pagination', 'mcbain_ajax_results' );
+add_action( 'widgets_init', function() {
+	register_sidebar( array(
+		'name'          => 'Sidebar Widgets',
+		'id'            => 'sidebar',
+		'before_widget' => '<div class="widget">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h5>',
+		'after_title'   => '</h5>',
+	) );
+} );
 
 
 /*	-----------------------------------------------------------------------------------------------
@@ -445,6 +383,7 @@ if ( ! function_exists( 'mcbain_add_block_editor_features' ) ) :
 		/* Block Editor Features ------------- */
 
 		add_theme_support( 'align-wide' );
+		add_theme_support( 'responsive-embeds' );
 
 		/* Block Editor Palette -------------- */
 

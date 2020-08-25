@@ -28,15 +28,14 @@
 
 			<?php endif; ?>
 
-			<div class="nav-toggle">
-				<div class="bar"></div>
-				<div class="bar"></div>
-			</div>
+			<input id="nav-toggle" type="checkbox"/>
+			<label class="flipper" for="nav-toggle">
+				<div class="bar bar1"></div>
+				<div class="bar bar2"></div>
+			</label>
 
 			<div class="menu-wrapper">
-
-				<ul class="main-menu desktop">
-
+				<ul class="main-menu">
 					<?php
 
 					if ( has_nav_menu( 'main-menu' ) ) {
@@ -61,37 +60,11 @@
 					?>
 				</ul>
 
-			</div>
-		</header>
-
-		<div class="mobile-menu-wrapper">
-			<ul class="main-menu mobile">
-				<?php
-				if ( has_nav_menu( 'main-menu' ) ) {
-					wp_nav_menu( $main_menu_args );
-				} else {
-					wp_list_pages( $fallback_args );
-				}
-				?>
-			</ul>
-		</div>
-
-		<?php if ( ! get_theme_mod( 'mcbain_hide_social', false ) ) : ?>
-
-			<div class="mobile-search">
-				<div class="untoggle-mobile-search"></div>
-
-				<?php get_search_form(); ?>
-
-				<div class="mobile-results">
-					<div class="results-wrapper"></div>
+				<div class="widget-section">
+					<?php dynamic_sidebar("sidebar"); ?>
 				</div>
 			</div>
 
-			<div class="search-overlay">
-				<?php get_search_form(); ?>
-			</div>
-
-		<?php endif; ?>
+		</header>
 
 		<main class="site-content" id="site-content">
