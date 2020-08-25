@@ -60,14 +60,14 @@ if ( $post->ID === $parent_id ) {
 
 	<?php endif; ?>
 
-	<div class="nav-toggle">
-		<div class="bar"></div>
-		<div class="bar"></div>
-	</div>
+	<input id="nav-toggle" type="checkbox"/>
+	<label class="flipper" for="nav-toggle">
+		<div class="bar bar1"></div>
+		<div class="bar bar2"></div>
+	</label>
 
-	<div class="menu-wrapper">
-
-		<ul class="main-menu desktop">
+		<div class="menu-wrapper">
+			<ul class="main-menu">
 <?php
 
 $args = array(
@@ -91,35 +91,9 @@ if ( $parent->have_posts() ) : ?>
 <?php wp_reset_postdata(); ?>
 
 </ul>
-</div><!-- .menu-wrapper -->
-
+</div>
 
 </header>
-
-<div class="mobile-menu-wrapper">
-	<ul class="main-menu mobile">
-		<?php
-			$args = array(
-			'post_type'      => 'page',
-			'posts_per_page' => -1,
-			'post_parent'    => $parent_id,
-			'orderby'        => 'menu_order',
-			'order'          => 'ASC',
-		);
-
-		$parent = new WP_Query( $args );
-		if ( $parent->have_posts() ) : ?>
-
-			<?php while ( $parent->have_posts() ) : $parent->the_post(); ?>
-
-				<li><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></li>
-
-			<?php endwhile; ?>
-
-		<?php endif; ?>
-		<?php wp_reset_postdata(); ?>
-	</ul>
-</div>
 
 <main class="site-content" id="site-content">
 	<article <?php post_class(); ?>>
