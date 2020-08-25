@@ -61,20 +61,6 @@ if ( ! class_exists( 'McBain_Customize' ) ) :
 				'section' 		=> 'mcbain_options',
 			) );
 
-			// Hide social
-			$wp_customize->add_setting( 'mcbain_hide_social', array(
-				'capability' 		=> 'edit_theme_options',
-				'sanitize_callback' => 'mcbain_sanitize_checkbox',
-				'transport'			=> 'postMessage',
-			) );
-
-			$wp_customize->add_control( 'mcbain_hide_social', array(
-				'type' 			=> 'checkbox',
-				'section' 		=> 'mcbain_options',
-				'label' 		=> __( 'Hide Social Buttons', 'mcbain' ),
-				'description' 	=> __( 'Whether to hide the social buttons and the search overlay button.', 'mcbain' ),
-			) );
-
 			// Decide order of month + day in post previews
 			$wp_customize->add_setting( 'mcbain_preview_date_format', array(
 				'capability' 		=> 'edit_theme_options',
