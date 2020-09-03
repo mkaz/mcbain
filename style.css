@@ -15,7 +15,7 @@
 	version 2.0 (http://www.gnu.org/licenses/gpl-2.0.html)
 */
 html {
-	font-size: 1.0rem;
+	font-size: 18px;
 }
 
 html, body {
@@ -108,7 +108,7 @@ body {
 	border: none;
     color: #121212;
 	font-size: 1.0rem;
-	font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", sans-serif, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-family: "Noto Serif", "Droid Serif", Georgia, serif;
 	padding-left: 380px;
 }
 

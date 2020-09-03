@@ -16,7 +16,7 @@
 }
 
 .editor-styles-wrapper > * {
-	font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", sans-serif, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-family: "Noto Serif", "Droid Serif", Georgia, serif;
 	font-size: 18px;
 	-webkit-font-smoothing: antialiased;
 }
