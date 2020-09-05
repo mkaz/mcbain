@@ -20,11 +20,6 @@ add_action( 'after_setup_theme', function() {
 	// Custom image sizes
 	add_image_size( 'mcbain_preview-image', 600, 9999 );
 
-	// Background color
-	add_theme_support( 'custom-background', array(
-		'default-color' => 'ffffff',
-	) );
-
 	// Title tag support
 	add_theme_support( 'title-tag' );
 
@@ -48,9 +43,6 @@ add_filter( 'query_vars', function( $vars ) {
 	$vars[] = "filter";
 	return $vars;
 } );
-
-// Handle Customizer settings
-require get_template_directory() . '/inc/classes/class-mcbain-customize.php';
 
 
 /*	-----------------------------------------------------------------------------------------------
@@ -96,21 +88,6 @@ add_action( 'body_class', function( $classes ) {
 	// Check whether we're in the customizer preview
 	if ( is_customize_preview() ) {
 		$classes[] = 'customizer-preview';
-	}
-
-	// White bg class
-	if ( get_theme_mod( 'mcbain_accent_color' ) == '#ffffff' && ( ! get_background_color() || get_background_color() == 'ffffff' ) ) {
-		$classes[] = 'white-bg';
-	}
-
-	// Check whether the custom backgrounds are both set to the same thing
-	if ( get_theme_mod( 'mcbain_accent_color' ) && get_background_color() && ltrim( get_theme_mod( 'mcbain_accent_color' ), '#' ) == get_background_color() ) {
-		$classes[] = 'same-custom-bgs';
-	}
-
-	// Add short class for resume page template
-	if ( is_page_template( 'resume-page-template.php' ) ) {
-		$classes[] = 'resume-template';
 	}
 
 	// Add short class for full width page template

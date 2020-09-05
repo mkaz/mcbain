@@ -25,6 +25,13 @@ html, body {
     min-height: 100%;
 }
 
+:root {
+	--color-sidebar-bg: #161a3e;
+	--color-sidebar-fg: #FFFFFF;
+	--color-site-title: #55babd;
+}
+
+
 ::selection {
 	color: #121212;
 	background: #FFFF66;
@@ -485,8 +492,8 @@ object {
 }
 
 .site-header {
-	background: #0F4C81;
-	color: #fff;
+	background: var(--color-sidebar-bg);
+	color: var(--color-sidebar-fg);
     margin: 0 auto 0 auto;
 	padding: 80px 50px 144px 50px;
 	position: fixed;
@@ -512,12 +519,14 @@ object {
 }
 
 .site-title {
-	font-size: 1.3333rem;
+	color: var(--color-site-title);
+	font-size: 2.0rem;
 	font-weight: 700;
 	margin: 0;
 }
 
 .site-title a {
+	color: var(--color-site-title);
 	border-bottom: 1px solid transparent;
 	text-decoration: none;
 }
@@ -604,6 +613,7 @@ input:checked ~ .flipper > .bar2 {
 }
 
 .main-menu a {
+	color: var(--color-sidebar-fg);
 	border-bottom: 1px solid transparent;
 	text-decoration: none;
 }
