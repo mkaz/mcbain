@@ -589,9 +589,9 @@ input:checked ~ .flipper > .bar2 {
 }
 
 .menu-wrapper {
-	margin-top: 60px;
+	margin-top: 1.0rem;
 	overflow: hidden;
-	padding-bottom: 32px;
+	padding-bottom: 1.5rem;
 	width: 100%;
 }
 
