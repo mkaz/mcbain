@@ -1207,6 +1207,11 @@ input:checked ~ .flipper > .bar2 {
 	flex-shrink: 0;
 }
 
+.entry-content details p {
+	margin: 1.0rem 0 0 2.0rem;
+	font-size: 0.8889rem;
+}
+
 .wp-block-gallery .blocks-gallery-image figcaption,
 .wp-block-gallery .blocks-gallery-item figcaption {
 	color: #fff;
