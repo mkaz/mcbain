@@ -525,18 +525,8 @@ object {
 	margin: 0;
 }
 
-.site-title a {
-	color: var(--color-site-title);
-	border-bottom: 1px solid transparent;
-	text-decoration: none;
-}
-
-.site-title a:hover {
-	border-bottom-color: #fff;
-}
-
 .site-description {
-	color: rgba( 255, 255, 255, .6 );
+	color: rgba( 255, 255, 255, 0.8 );
 	margin-top: 8px;
 }
 

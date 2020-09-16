@@ -18,14 +18,14 @@
 
 		<header class="site-header group">
 
-			<?php $site_title_elem = is_front_page() || ( is_home() && get_option( 'show_on_front' ) == 'posts' ) ? 'h1' : 'p'; ?>
-
-			<<?php echo $site_title_elem; ?> class="site-title"><a href="<?php echo esc_url( home_url() ); ?>" class="site-name"><?php bloginfo( 'name' ); ?></a></<?php echo $site_title_elem; ?>>
+			<div class="site-title">
+				<a href="<?php echo esc_url( home_url() ); ?>" class="site-name">
+					<img alt="mkaz.blog logo" title="mkaz.blog" src="<?php echo get_template_directory_uri(); ?>/mkaz-logo.svg" />
+				</a>
+			</div>
 
 			<?php if ( get_bloginfo( 'description' ) ) : ?>
-
-				<div class="site-description"><?php echo wpautop( get_bloginfo( 'description' ) ); ?></div>
-
+				<div class="site-description"><?php echo get_bloginfo( 'description' ); ?></div>
 			<?php endif; ?>
 
 			<input id="nav-toggle" type="checkbox"/>
