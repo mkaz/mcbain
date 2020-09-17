@@ -29,6 +29,9 @@ html, body {
 	--color-sidebar-bg: #161a3e;
 	--color-sidebar-fg: #FFFFFF;
 	--color-site-title: #55babd;
+
+	--color-cyan: #55babd;
+	--color-orange: #e36137;
 }
 
 
@@ -431,22 +434,23 @@ tbody > tr:nth-child(odd) {
 }
 
 blockquote {
-	border-color: #CB4C00;
+	border-color: var(--color-cyan);
 	border-style: dotted;
 	border-width: 0 0 0 2px;
-    margin: 0 8% 30px 8%;
+    margin: 0 6% 30px 6%;
     padding: 0 0 0 20px;
 }
 
 blockquote p {
 	font-weight: 400;
-	color: #CB4C00;
+	color: #D0491D;
 	hanging-punctuation: first;
 }
 
 blockquote cite {
 	display: block;
-	color: #121212;
+	color: #767676;
+	font-size: 0.8889rem;
 	font-style: normal;
 	margin: 1em 0 0;
 }
@@ -805,7 +809,7 @@ input:checked ~ .flipper > .bar2 {
 }
 
 .meta {
-	color: rgba( 0, 0, 4, 0.4 );
+	color: #767676;
 	margin-top: 8px;
 }
 
@@ -820,7 +824,7 @@ input:checked ~ .flipper > .bar2 {
 }
 
 .meta a:hover {
-	border-bottom-color: rgba( 0, 0, 4, 0.4 );
+	border-bottom-color: var(--color-orange);
 }
 
 .featured-image img {
@@ -1354,12 +1358,12 @@ input:checked ~ .flipper > .bar2 {
 
 .entry-content a {
 	color: #1565C0;
-	border-bottom: 1px solid rgba( 0, 0, 0, .25 );
 	text-decoration: none;
 }
 
 .entry-content a:hover {
-	color: red;
+	border-bottom: 1px solid var(--color-orange);
+
 }
 
 hr {
