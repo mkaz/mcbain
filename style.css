@@ -513,6 +513,15 @@ object {
 	color: #fff;
 }
 
+.site-header a:hover g.letters path {
+	stroke: #55babd;
+	fill: #55babd;
+}
+
+.site-header a:hover g.mark path {
+	stroke: #e36137;
+}
+
 .site-title,
 .site-description {
 	line-height: 1.25;
