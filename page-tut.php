@@ -7,8 +7,15 @@
  */
 
 $parent_id = ( $post->post_parent ) ? $post->post_parent : $post->ID;
-$parent = get_post( $parent_id );
-$parent_title = ( $parent && ($parent->ID != $post->ID) ) ? $parent->post_title . " - " : "";
+
+add_filter( 'document_title_parts', function( $title ) {
+	global $post, $parent_id;
+	$parent = get_post( $parent_id );
+	$parent_title = ( isset($parent) && ($parent->ID != $post->ID) ) ? $parent->post_title . " - " : "";
+	$parent_title .= get_bloginfo( 'name' );
+	$title['site'] = $parent_title;
+	return $title;
+}, 10, 2 );
 
 // get previous / next pages
 
@@ -78,10 +85,10 @@ $args = array(
     'order'          => 'ASC',
  );
 
-$parent = new WP_Query( $args );
-if ( $parent->have_posts() ) : ?>
+$parent_pages = new WP_Query( $args );
+if ( $parent_pages->have_posts() ) : ?>
 
-    <?php while ( $parent->have_posts() ) : $parent->the_post(); ?>
+    <?php while ( $parent_pages->have_posts() ) : $parent_pages->the_post(); ?>
 
         <li><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></li>
 
