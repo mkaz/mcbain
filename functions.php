@@ -447,4 +447,27 @@ add_action( 'enqueue_block_editor_assets', function() {
 
 } );
 
-?>
+
+// Simplify code syntax list to ones I use
+add_filter( 'mkaz_code_syntax_language_list', function() {
+	return array(
+		"bash" => "Bash/Shell",
+		"go" => "Go",
+		"html" => "HTML",
+		"javascript" => "JavaScript",
+		"json" => "JSON",
+		"markdown" => "Markdown",
+		"php" => "PHP",
+		"python" => "Python",
+		"jsx" => "React JSX",
+		"rust" => "Rust",
+		"sass" => "Sass",
+		"sql" => "SQL",
+		"svg" => "SVG",
+		"toml" => "TOML",
+		"vim" => "vim",
+		"xml" => "XML",
+		"yaml" => "YAML",
+	);
+} );
+
