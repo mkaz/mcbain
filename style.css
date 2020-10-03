@@ -602,17 +602,28 @@ input:checked ~ .flipper > .bar2 {
 
 .menu-wrapper {
 	margin-top: 1.0rem;
+	padding-top: 2.0rem;
 	overflow: hidden;
 	padding-bottom: 1.5rem;
 	width: 100%;
 }
+
+h3.section-title {
+	font-size: 1.0rem;
+	margin: 0;
+}
+
+h3.section-title a,
+h3.section-title a:visited {
+	color: var(--color-cyan);
+}
+
 
 .main-menu {
 	margin: 0;
 	-ms-overflow-style: -ms-autohiding-scrollbar;
 	overflow: auto;
 	width: 100%;
-	margin-top: 40px;
 }
 
 .main-menu a {
