@@ -1365,6 +1365,7 @@ h3.section-title a:visited {
 	position: relative;
 		-ms-word-break: break-word;
 	word-break: break-word;
+	min-height: 480px;
 }
 
 .entry-content a {
