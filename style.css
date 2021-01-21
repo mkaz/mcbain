@@ -1506,13 +1506,13 @@ p.has-drop-cap:not(:focus):first-letter {
 }
 
 input.search-field {
-	background: url( ./assets/images/spyglass-white.svg ) no-repeat left center;
+	background: url( ./assets/images/spyglass-black.svg ) no-repeat left center;
 	background-size: 26px auto;
 	border: none;
-	border-bottom: 1px solid #FFFFFF;
+	border-bottom: 1px solid #111111;
 	border-radius: 0;
 	box-shadow: none;
-	color: #FFFF33;
+	color: #333333;
 	font-size: 1em;
 	margin: 0;
 	outline: none;
@@ -1522,9 +1522,9 @@ input.search-field {
 	-webkit-appearance: none;
 }
 
-input.search-field::-webkit-input-placeholder { color: #FFFFFF; }
-input.search-field:-ms-input-placeholder { color: #FFFFFF; }
-input.search-field::-moz-placeholder { color: #FFFFFF; }
+input.search-field::-webkit-input-placeholder { color: #111111; }
+input.search-field:-ms-input-placeholder { color: #111111; }
+input.search-field::-moz-placeholder { color: #111111; }
 
 
 .site-footer {
