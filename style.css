@@ -26,8 +26,8 @@ html, body {
 }
 
 :root {
-	--color-sidebar-bg: #161a3e;
-	--color-sidebar-fg: #FFFFFF;
+	--color-sidebar-bg: #F5DF4D;
+	--color-sidebar-fg: #111111;
 	--color-site-title: #55babd;
 
 	--color-cyan: #55babd;
@@ -539,7 +539,7 @@ object {
 }
 
 .site-description {
-	color: rgba( 255, 255, 255, 0.8 );
+	color: rgba( 0, 0, 0, 0.8 );
 	margin-top: 8px;
 }
 
