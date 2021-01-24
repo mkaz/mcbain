@@ -615,7 +615,7 @@ h3.section-title {
 
 h3.section-title a,
 h3.section-title a:visited {
-	color: var(--color-cyan);
+	color: var(--color-sidebar-fg);
 }
 
 
