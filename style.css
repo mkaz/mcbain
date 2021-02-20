@@ -505,7 +505,7 @@ object {
 		bottom: 0;
 		top: 0;
     width: 350px;
-	z-index: 99998;
+	overflow: auto;
 }
 
 .same-custom-bgs .site-header,
@@ -603,7 +603,6 @@ input:checked ~ .flipper > .bar2 {
 .menu-wrapper {
 	margin-top: 1.0rem;
 	padding-top: 2.0rem;
-	overflow: hidden;
 	padding-bottom: 1.5rem;
 	width: 100%;
 }
@@ -621,19 +620,14 @@ h3.section-title a:visited {
 
 .main-menu {
 	margin: 0;
-	-ms-overflow-style: -ms-autohiding-scrollbar;
-	overflow: auto;
 	width: 100%;
+	list-style: none;
 }
 
 .main-menu a {
 	color: var(--color-sidebar-fg);
 	border-bottom: 1px solid transparent;
 	text-decoration: none;
-}
-
-.main-menu ul {
-	list-style: none;
 }
 
 .main-menu li {
