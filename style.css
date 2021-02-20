@@ -168,12 +168,8 @@ input::-moz-placeholder { color: rgba( 0, 0, 4, 0.4 ); }
 }
 
 .section-inner {
-	margin: 0 auto;
+	padding: 0 2.0rem;
 	max-width: 720px;
-	width: 85%;
-}
-
-.section-inner .section-inner {
 	width: 100%;
 }
 
@@ -535,7 +531,7 @@ object {
 	color: var(--color-site-title);
 	font-size: 2.0rem;
 	font-weight: 700;
-	margin: 0;
+	margin: 1.0rem 0 0 0;
 }
 
 .site-description {
@@ -806,7 +802,7 @@ h3.section-title a:visited {
 }
 
 .entry-header {
-	margin: 3rem auto 2.5rem auto;
+	margin: 3rem 0 2.5rem 0;
 }
 
 .entry-header .excerpt {
