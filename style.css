@@ -1621,7 +1621,7 @@ input.search-field::-moz-placeholder { color: #111111; }
 
 	input:checked ~ .menu-wrapper .main-menu {
 		opacity: 1;
-		padding-bottom: 124px;
+		padding-bottom: 1.0rem;
 		transition: opacity .4s linear;
 	}
 
