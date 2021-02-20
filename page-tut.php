@@ -166,8 +166,6 @@ if ( $parent_pages->have_posts() ) : ?>
 		<?php endif; ?>
 	</nav>
 
-</main>
-
 <?php
 get_footer();
 
