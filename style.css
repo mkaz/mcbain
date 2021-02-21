@@ -913,17 +913,13 @@ h3.section-title a:visited {
 .comment-respond {
 	border-top: 1px solid rgba( 0, 0, 4, 0.125 );
 	margin: 100px auto 0 auto;
-	padding: 30px 0 0 34.125%;
+	padding: 30px 0 0 0;
 	position: relative;
 }
 
 .comment-reply-title {
 	font-size: inherit;
 	margin: 0;
-	position: absolute;
-		left: 0;
-		top: 30px;
-	width: calc( 34.125% - 20px );
 }
 
 .comment,
