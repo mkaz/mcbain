@@ -1,6 +1,6 @@
 <?php if ( get_the_posts_pagination() ) : ?>
 
-	<div class="archive-pagination section-inner group">
+	<div class="archive-pagination group">
 
 		<?php if ( get_previous_posts_link() ) : ?>
 			<div class="previous-posts-link">
@@ -14,6 +14,6 @@
 			</div>
 		<?php endif; ?>
 
-	</div> <!-- .pagination -->
+	</div>
 
 <?php endif; ?>

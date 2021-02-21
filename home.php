@@ -17,39 +17,36 @@
 	get_header();
 ?>
 
-<div class="section-inner">
+<header class="page-header">
+	<h2 class="page-title"> Articles </h2>
 
-	<header class="page-header">
-		<h2 class="page-title"> Articles </h2>
+	<div class="filter-list">
+		Filter:
+		<?php
+		$categories = get_categories();
+		foreach ( $categories as $category ) :
+			if ( $filter && $category->name === $filter ) : ?>
+				<span class="selected"><?php echo esc_html($category->name);?></span>
+			<?php else : ?>
+				<span><a href="/?filter=<?php echo esc_attr($category->name);?>"><?php echo esc_html($category->name);?></a></span>
+			<?php endif; ?>
+		<?php endforeach; ?>
+	</div>
+</header>
 
-		<div class="filter-list">
-			Filter:
+<?php
+if ( $the_query->have_posts() ) : ?>
+	<div class="posts" id="posts">
+		<ul>
 			<?php
-			$categories = get_categories();
-			foreach ( $categories as $category ) :
-				if ( $filter && $category->name === $filter ) : ?>
-					<span class="selected"><?php echo esc_html($category->name);?></span>
-				<?php else : ?>
-					<span><a href="/?filter=<?php echo esc_attr($category->name);?>"><?php echo esc_html($category->name);?></a></span>
-				<?php endif; ?>
-			<?php endforeach; ?>
-		</div>
-	</header>
+			while ( $the_query->have_posts() ) : $the_query->the_post();
+				get_template_part( 'content', get_post_type() );
+			endwhile;
+			?>
+		</ul>
+	</div>
+<?php endif; ?>
 
-	<?php
-
-	if ( $the_query->have_posts() ) : ?>
-		<div class="posts" id="posts">
-			<ul>
-				<?php
-				while ( $the_query->have_posts() ) : $the_query->the_post();
-					get_template_part( 'content', get_post_type() );
-				endwhile;
-				?>
-			</ul>
-		</div>
-	<?php endif; ?>
-</div>
 <?php
 
 get_template_part( 'pagination' );

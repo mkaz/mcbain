@@ -14,7 +14,7 @@ if ( have_posts() ) :
 				</div>
 			<?php endif; ?>
 
-			<header class="entry-header section-inner">
+			<header class="entry-header">
 				<?php
 				the_title( '<h1 class="entry-title">', '</h2>' );
 
@@ -64,19 +64,19 @@ if ( have_posts() ) :
 				<?php endif; ?>
 			</header>
 
-			<div class="entry-content section-inner">
+			<div class="entry-content">
 				<?php the_content(); ?>
 			</div>
 
 			<?php
 
 			wp_link_pages( array(
-				'before' => '<p class="section-inner linked-pages">' . __( 'Pages', 'mcbain' ) . ':',
+				'before' => '<p class="linked-pages">' . __( 'Pages', 'mcbain' ) . ':',
 			) );
 
 			if ( $post_type == 'post' && get_the_tags() ) : ?>
 
-				<div class="meta bottom section-inner">
+				<div class="meta bottom">
 					<p class="tags"><?php the_tags( ' #', ' #', ' ' ); ?></p>
 				</div> <!-- .meta -->
 
@@ -86,7 +86,7 @@ if ( have_posts() ) :
 			// Check for single post pagination
 			if ( is_single() && ! is_attachment() && ( get_previous_post_link() || get_next_post_link() ) ) : ?>
 
-				<div class="post-pagination section-inner">
+				<div class="post-pagination">
 
 					<div class="previous-post">
 						<?php if ( get_previous_post_link() ) : ?>
@@ -107,9 +107,7 @@ if ( have_posts() ) :
 			// Output comments wrapper if comments are open, or if there's a comment number – and check for password
 			if ( ( comments_open() || get_comments_number() ) && ! post_password_required() ) : ?>
 
-				<div class="comments-section-inner section-inner">
-					<?php comments_template(); ?>
-				</div>
+				<?php comments_template(); ?>
 
 			<?php endif; ?>
 
