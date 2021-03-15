@@ -351,7 +351,6 @@ textarea {
 
 button,
 .button,
-.wp-block-file__button,
 .wp-block-button__link,
 input[type="button"],
 input[type="submit"] {
@@ -466,25 +465,10 @@ object {
 	max-width: 100%;
 }
 
-.gallery-caption,
-.wp-caption-text,
-:root figcaption {
+figcaption {
     font-size: 0.8333rem;
 	margin: 8px 0 0;
 	color: #666666;
-}
-
-:root .gallery-caption,
-:root .wp-caption-text {
-	margin-bottom: 0;
-}
-
-.wp-caption-text {
-	color: rgba( 0, 0, 0, .5 );
-}
-
-.wp-caption-text a {
-	color: inherit;
 }
 
 .site-header {
@@ -1185,34 +1169,6 @@ h3.section-title a:visited {
 .wp-block-column > *:first-child { margin-top: 0; }
 .wp-block-column > *:last-child { margin-bottom: 0; }
 
-.wp-block-cover-image {
-	color: #fff;
-}
-
-.wp-block-cover-image p {
-	font-weight: 400;
-}
-
-.entry-content .wp-block-file {
-	align-items: center;
-	background: rgba( 0, 0, 0, 0.05 );
-	border-radius: 4px;
-	display: flex;
-	justify-content: space-between;
-	margin: 30px 0;
-	padding: 20px;
-}
-
-.entry-content .wp-block-file a:not(.wp-block-file__button) {
-	border: none;
-	font-weight: 500;
-	text-decoration: none;
-}
-
-.entry-content .wp-block-file__button {
-	flex-shrink: 0;
-}
-
 .entry-content details p {
 	margin: 1.0rem 0 0 2.0rem;
 	font-size: 0.8889rem;
@@ -1245,13 +1201,13 @@ h3.section-title a:visited {
 	max-width: 100% important!;
 }
 
-.wp-block-image figcaption {
+figcaption {
 	text-align: center;
 }
 
-.wp-block-image .aligncenter > figcaption,
-.wp-block-image .alignleft > figcaption,
-.wp-block-image .alignright > figcaption,
+.aligncenter > figcaption,
+.alignleft > figcaption,
+.alignright > figcaption,
 .wp-block-image.is-resized > figcaption {
 	display: block;
 }
@@ -1345,8 +1301,6 @@ h3.section-title a:visited {
 
 .entry-content {
 	position: relative;
-		-ms-word-break: break-word;
-	word-break: break-word;
 	min-height: 480px;
 }
 
