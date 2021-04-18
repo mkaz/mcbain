@@ -26,8 +26,8 @@ html, body {
 }
 
 :root {
-	--color-sidebar-bg: #F5DF4D;
-	--color-sidebar-fg: #111111;
+	--color-sidebar-bg: #1d3557;
+	--color-sidebar-fg: #FFFFFF;
 	--color-site-title: #55babd;
 
 	--color-cyan: #55babd;
@@ -167,10 +167,6 @@ input::-moz-placeholder { color: rgba( 0, 0, 4, 0.4 ); }
 	padding: 0 2.0rem;
 	max-width: 760px;
 	width: 100%;
-}
-
-a {
-	transition: all .15s linear;
 }
 
 .entry-title {
@@ -425,22 +421,21 @@ tbody > tr:nth-child(odd) {
 }
 
 blockquote {
-	border-color: var(--color-cyan);
-	border-style: dotted;
+	border-color: var(--color-sidebar-bg);
+	border-style: solid;
 	border-width: 0 0 0 2px;
-    margin: 0 6% 30px 6%;
+    margin: 0 9% 30px 9%;
     padding: 0 0 0 20px;
 }
 
 blockquote p {
 	font-weight: 400;
-	color: #D0491D;
-	hanging-punctuation: first;
+	color: #555;
 }
 
 blockquote cite {
 	display: block;
-	color: #767676;
+	color: #757575;
 	font-size: 0.8889rem;
 	font-style: normal;
 	margin: 1em 0 0;
@@ -480,7 +475,7 @@ figcaption {
 		left: 0;
 		bottom: 0;
 		top: 0;
-    width: 350px;
+    width: 320px;
 	overflow: auto;
 }
 
@@ -515,7 +510,7 @@ figcaption {
 }
 
 .site-description {
-	color: rgba( 0, 0, 0, 0.8 );
+	color: var(--color-sidebar-fg);
 	margin-top: 8px;
 }
 
@@ -1305,12 +1300,13 @@ figcaption {
 }
 
 .entry-content a {
-	color: #1565C0;
+	color: #0044CC;
 	text-decoration: none;
 }
 
 .entry-content a:hover {
-	border-bottom: 1px solid var(--color-orange);
+	color: var(--color-orange);
+	border-bottom: 1px solid #0044CC;
 
 }
 
@@ -1442,13 +1438,13 @@ p.has-drop-cap:not(:focus):first-letter {
 }
 
 input.search-field {
-	background: url( ./assets/images/spyglass-black.svg ) no-repeat left center;
+	background: url( ./assets/images/spyglass-white.svg ) no-repeat left center;
 	background-size: 26px auto;
 	border: none;
-	border-bottom: 1px solid #111111;
+	border-bottom: 1px solid #FFFFFF;
 	border-radius: 0;
 	box-shadow: none;
-	color: #333333;
+	color: #FFFFFF;
 	font-size: 1em;
 	margin: 0;
 	outline: none;
@@ -1458,9 +1454,9 @@ input.search-field {
 	-webkit-appearance: none;
 }
 
-input.search-field::-webkit-input-placeholder { color: #111111; }
-input.search-field:-ms-input-placeholder { color: #111111; }
-input.search-field::-moz-placeholder { color: #111111; }
+input.search-field::-webkit-input-placeholder { color: #FFFFFF; }
+input.search-field:-ms-input-placeholder { color: #FFFFFF; }
+input.search-field::-moz-placeholder { color: #FFFFFF; }
 
 
 .site-footer {
