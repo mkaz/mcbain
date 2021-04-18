@@ -713,6 +713,7 @@ h3.posts-category-title {
 }
 
 .post-preview a:hover {
+	color: var(--color-orange);
 	text-decoration: none;
 }
 
@@ -1740,6 +1741,10 @@ input.search-field::-moz-placeholder { color: #FFFFFF; }
 		margin: 9px 0 0;
 	}
 
+	.posts li {
+		padding-bottom: 2rem;
+	}
+
 	.post-preview a span {
 		width: 100%;
 	}
@@ -1753,8 +1758,8 @@ input.search-field::-moz-placeholder { color: #FFFFFF; }
 
 @media ( max-width: 500px ) {
 
-	body {
-		font-size: 0.888rem;
+	.site-content {
+		padding: 0 1.0rem;
 	}
 
 	.excerpt {
@@ -1843,14 +1848,6 @@ input.search-field::-moz-placeholder { color: #FFFFFF; }
 		font-size: 1.1111rem;
 	}
 
-	.posts:first-child {
-		margin-top: 50px;
-	}
-
-	.posts > ul + ul {
-		margin-top: 50px;
-	}
-
 	.comment {
 		margin-top: 25px;
 	}
@@ -1865,10 +1862,6 @@ input.search-field::-moz-placeholder { color: #FFFFFF; }
 
 	.error404 .search-form {
 		margin-top: 22px;
-	}
-
-	.post-preview a time {
-		visible: hidden;
 	}
 }
 
