@@ -1,7 +1,7 @@
 /*
 	Theme Name: McBain
     Text Domain: mcbain
-	Version: 1.1.2
+	Version: 1.2.0
 	Description: McBain is a fork of McLuhan by Anders Norén https://www.andersnoren.se
 	Author: Marcus Kazmierczak
 	Author URI: https://mkaz.blog/
@@ -150,6 +150,7 @@ img {
     max-width: 100%;
 }
 
+.posts:after,
 .group:after,
 .pagination:after,
 .gallery:after,
@@ -651,6 +652,14 @@ h3.section-title a:visited {
 	margin-top: 20px;
 }
 
+h3.posts-category-title:first-of-type {
+	margin-top: 0;
+}
+
+h3.posts-category-title {
+	margin-bottom: 1rem;
+}
+
 .posts:first-child {
 	margin-top: 80px;
 }
@@ -684,61 +693,37 @@ h3.section-title a:visited {
 	text-decoration: none;
 }
 
-.post-preview {
-	border-top: 1px solid rgba( 0, 0, 4, .125 );
-	position: relative;
-}
-
 .post-preview a {
-	display: flex;
-	justify-content: space-between;
-	padding: 17px 0;
+	padding: 4px 0;
 	text-decoration: none;
 }
 
-.post-preview.no-title a {
-	justify-content: flex-end;
+.post-preview a span {
+	float: left;
+	overflow: hidden;
+	width: 86%;
+	white-space:nowrap;
+}
+
+.post-preview a span::after {
+	content: "........................................................................................";
+	color: rgba( 0, 0, 4, 0.4 );
+	letter-spacing: 2px;
+	padding-left: 8px;
 }
 
 .post-preview a:hover {
 	text-decoration: none;
 }
 
-.sticky .sticky-arrow {
-	background:  url( ./assets/images/arrow-black-right.svg ) no-repeat center;
-	background-size: auto 12px;
-	border-radius: 50%;
-	display: inline;
-	height: 12px;
-	position: absolute;
-		right: calc( 100% + 7px );
-		top: calc( 50% - 6px );
-	width: 20px;
-}
-
-.post-preview a .title {
-	font-size: inherit;
-	font-weight: inherit;
-	line-height: 1.25;
-	margin: 0;
-		-ms-word-break: break-word;
-	word-break: break-word;
-}
-
-.post-preview a .title span {
-	border-bottom: 1px solid transparent;
-	transition: border-color .2s linear;
-}
-
-.post-preview a:hover .title span {
-	border-bottom-color: #121212;
-}
-
-.post-preview time {
+.post-preview a time {
+	float: left;
+	width: 14%;
 	color: rgba( 0, 0, 4, 0.4 );
-	line-height: 1.25;
-	margin-left: 30px;
+	padding-left: 4px;
 	white-space: nowrap;
+	overflow: hidden;
+	text-align: right;
 }
 
 .archive-pagination {
@@ -1729,48 +1714,6 @@ input.search-field::-moz-placeholder { color: #FFFFFF; }
 		margin: 30px auto;
 	}
 
-	/* PAGE MEDIA */
-
-	.gallery {
-		left: calc( 50% - 50vw );
-		margin: 40px auto 30px;
-		padding: 0 5px;
-		width: 100vw;
-	}
-
-	.gallery + .gallery {
-		margin-top: -30px;
-	}
-
-	.gallery .gallery-item {
-		margin-bottom: 10px;
-		padding: 0 5px;
-	}
-
-	.gallery-caption {
-		display: none;
-	}
-
-	.gallery-columns-2 .gallery-item,
-	.gallery-columns-3 .gallery-item,
-	.gallery-columns-4 .gallery-item,
-	.gallery-columns-5 .gallery-item,
-	.gallery-columns-6 .gallery-item,
-	.gallery-columns-7 .gallery-item,
-	.gallery-columns-8 .gallery-item,
-	.gallery-columns-9 .gallery-item {
-		width: 50%;
-	}
-
-	/* PULL QUOTES */
-
-	.entry-content .pull.left,
-	.entry-content .pull.right {
-		float: none;
-		margin: 40px 0 40px 0;
-		width: 100%;
-	}
-
 	.comments-pagination {
 		margin-top: 80px;
 	}
@@ -1795,6 +1738,15 @@ input.search-field::-moz-placeholder { color: #FFFFFF; }
 
 	.site-footer .theme-by {
 		margin: 9px 0 0;
+	}
+
+	.post-preview a span {
+		width: 100%;
+	}
+
+	.post-preview a time {
+		display: none;
+		width: 0;
 	}
 
 }
@@ -1899,12 +1851,6 @@ input.search-field::-moz-placeholder { color: #FFFFFF; }
 		margin-top: 50px;
 	}
 
-	.sticky .sticky-arrow {
-		display: inline-block;
-		margin-right: 2px;
-		position: static;
-	}
-
 	.comment {
 		margin-top: 25px;
 	}
@@ -1919,6 +1865,10 @@ input.search-field::-moz-placeholder { color: #FFFFFF; }
 
 	.error404 .search-form {
 		margin-top: 22px;
+	}
+
+	.post-preview a time {
+		visible: hidden;
 	}
 }
 

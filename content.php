@@ -2,9 +2,7 @@
 
 	<a href="<?php the_permalink(); ?>">
 		<?php
-		$sticky = is_sticky() ? '<div class="sticky-arrow"></div>'  : '';
-		the_title( '<h2 class="title">' . $sticky . '<span>', '</span></h2>' );
-
+		the_title('<span>', '</span>');
 
 		$date_format = 'M Y';
 		$date = date_i18n( $date_format, get_the_time( 'U' ) );
