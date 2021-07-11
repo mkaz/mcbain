@@ -20,7 +20,7 @@
 
 			<div class="site-title">
 				<a href="<?php echo esc_url( home_url() ); ?>" class="site-name">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/mkaz.blog-pride.svg" title="mkaz.blog pride" />
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/mkaz-logo.svg" title="mkaz.blog logo"/>
 				</a>
 			</div>
 

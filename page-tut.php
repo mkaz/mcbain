@@ -59,7 +59,7 @@ if ( $post->ID === $parent_id ) {
 
 		<div class="site-title">
 			<a href="<?php echo esc_url( home_url() ); ?>" class="site-name">
-				<img src="<?php echo get_stylesheet_directory_uri(); ?>/mkaz.blog-pride.svg" alt="mkaz.blog logo in pride colors"/>
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/mkaz-logo.svg" alt="mkaz.blog logo"/>
 			</a>
 		</div>
 
