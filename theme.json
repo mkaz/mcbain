@@ -1,0 +1,97 @@
+{
+    "version": 1,
+    "settings": {
+        "custom": {
+            "myBorder": "1px solid #0044CC"
+        },
+        "color": {
+            "custom": false,
+            "palette": [
+                {
+                    "name": "Black",
+                    "slug": "black",
+                    "color": "#111111"
+                },
+                {
+                    "name": "White",
+                    "slug": "white",
+                    "color": "#ffffff"
+                },
+                {
+                    "name": "Gray",
+                    "slug": "gray",
+                    "color": "#999"
+                },                
+                {
+                    "name": "Dark Blue",
+                    "slug": "dark-blue",
+                    "color": "#1D3567"
+                },
+                {
+                    "name": "Cyan",
+                    "slug": "cyan",
+                    "color": "#55BABD"
+                },
+                {
+                    "name": "Orange",
+                    "slug": "orange",
+                    "color": "#E36137"
+                }
+            ]
+        },
+        "layout": {
+            "contentSize": "720px",
+            "wideSize": "960px"
+        },
+        "typography": {
+            "customFontSize": false,
+            "fontSizes": [
+                {
+                    "slug": "small",
+                    "size": "16px",
+                    "name": "Small"
+                },
+                {
+                    "slug": "normal",
+                    "size": "18px",
+                    "name": "Normal"
+                },
+                {
+                    "slug": "large",
+                    "size": "24px",
+                    "name": "Large"
+                },
+                {
+                    "slug": "extra-large",
+                    "size": "28px",
+                    "name": "XL"
+                },
+                {
+                    "slug": "huge",
+                    "size": "32px",
+                    "name": "Huge"
+                }
+            ]
+        }
+    },
+    "styles": {
+        "blocks": {
+            "core/quote": {
+                "spacing": {
+                    "margin": {
+                        "top": "0",
+                        "right": "9%",
+                        "bottom": "30px",
+                        "left": "9%"
+                    }
+                },
+                "border": {
+                    "left": "solid 2px var(--wp--preset--wp--preset--color--orange)"
+                },
+                "color": {
+                    "text": "var(--wp--preset--color--orange)"
+                }
+            }
+        }
+    }
+}

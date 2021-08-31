@@ -363,68 +363,8 @@ if ( ! function_exists( 'mcbain_add_block_editor_features' ) ) :
 	function mcbain_add_block_editor_features() {
 
 		/* Block Editor Features ------------- */
-
 		add_theme_support( 'align-wide' );
 		add_theme_support( 'responsive-embeds' );
-
-		/* Block Editor Palette -------------- */
-
-		add_theme_support( 'editor-color-palette', array(
-			array(
-				'name' 	=> _x( 'Black', 'Name of the black color in the Gutenberg palette', 'mcbain' ),
-				'slug' 	=> 'black',
-				'color' => '#121212',
-			),
-			array(
-				'name' 	=> _x( 'Dark Gray', 'Name of the dark gray color in the Gutenberg palette', 'mcbain' ),
-				'slug' 	=> 'dark-gray',
-				'color' => '#333',
-			),
-			array(
-				'name' 	=> _x( 'Medium Gray', 'Name of the medium gray color in the Gutenberg palette', 'mcbain' ),
-				'slug' 	=> 'medium-gray',
-				'color' => '#555',
-			),
-			array(
-				'name' 	=> _x( 'Light Gray', 'Name of the light gray color in the Gutenberg palette', 'mcbain' ),
-				'slug' 	=> 'light-gray',
-				'color' => '#777',
-			),
-			array(
-				'name' 	=> _x( 'White', 'Name of the white color in the Gutenberg palette', 'mcbain' ),
-				'slug' 	=> 'white',
-				'color' => '#fff',
-			),
-		) );
-
-		/* Block Editor Font Sizes ----------- */
-
-		add_theme_support( 'editor-font-sizes', array(
-			array(
-				'name' 		=> _x( 'Small', 'Name of the small font size in Gutenberg', 'mcbain' ),
-				'shortName' => _x( 'S', 'Short name of the small font size in the Gutenberg editor.', 'mcbain' ),
-				'size' 		=> 16,
-				'slug' 		=> 'small',
-			),
-			array(
-				'name' 		=> _x( 'Normal', 'Name of the regular font size in Gutenberg', 'mcbain' ),
-				'shortName' => _x( 'N', 'Short name of the regular font size in the Gutenberg editor.', 'mcbain' ),
-				'size' 		=> 18,
-				'slug' 		=> 'normal',
-			),
-			array(
-				'name' 		=> _x( 'Large', 'Name of the large font size in Gutenberg', 'mcbain' ),
-				'shortName' => _x( 'L', 'Short name of the large font size in the Gutenberg editor.', 'mcbain' ),
-				'size' 		=> 24,
-				'slug' 		=> 'large',
-			),
-			array(
-				'name' 		=> _x( 'Larger', 'Name of the larger font size in Gutenberg', 'mcbain' ),
-				'shortName' => _x( 'XL', 'Short name of the larger font size in the Gutenberg editor.', 'mcbain' ),
-				'size' 		=> 28,
-				'slug' 		=> 'larger',
-			),
-		) );
 
 	}
 	add_action( 'after_setup_theme', 'mcbain_add_block_editor_features' );
