@@ -1,9 +1,6 @@
 {
     "version": 1,
     "settings": {
-        "custom": {
-            "myBorder": "1px solid #0044CC"
-        },
         "color": {
             "custom": false,
             "palette": [
@@ -21,7 +18,7 @@
                     "name": "Gray",
                     "slug": "gray",
                     "color": "#999"
-                },                
+                },
                 {
                     "name": "Dark Blue",
                     "slug": "dark-blue",
@@ -36,7 +33,27 @@
                     "name": "Orange",
                     "slug": "orange",
                     "color": "#E36137"
-                }
+                },
+				{
+					"name": "Info",
+					"slug": "info",
+					"color": "#d1ecf1"
+				},
+				{
+					"name": "Warning",
+					"slug": "warning",
+					"color": "#fff3cd"
+				},
+				{
+					"name": "Alert",
+					"slug": "alert",
+					"color": "#f8d7da"
+				},
+				{
+					"name": "Success",
+					"slug": "success",
+					"color": "#d4edda"
+				}
             ]
         },
         "layout": {
