@@ -9,14 +9,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      with:
-        fetch-depth: 2
+        with:
+          fetch-depth: 2
 
-        - name: FTP-Deploy-Action
+      - name: FTP-Deploy-Action
         uses: SamKirkland/FTP-Deploy-Action@3.0.0
         with:
           ftp-server: sftp://sftp.pressable.com/
           ftp-username: ${{ secrets.USERNAME }}
           ftp-password: ${{ secrets.PASSWORD }}
           git-ftp-args: --remote-root htdocs/wp-content/themes/mcbain/ --insecure
-
