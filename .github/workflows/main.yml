@@ -1,5 +1,7 @@
-on: push
 name: Publish Website
+on: push
+branches:
+    - trunk
 jobs:
   FTP-Deploy-Action:
     name: FTP-Deploy-Action
