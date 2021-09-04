@@ -1,7 +1,7 @@
 /*
 	Theme Name: McBain
     Text Domain: mcbain
-	Version: 1.2.1
+	Version: 1.2.2
 	Description: McBain is a fork of McLuhan by Anders Norén https://www.andersnoren.se
 	Author: Marcus Kazmierczak
 	Author URI: https://mkaz.blog/
@@ -26,25 +26,11 @@ body {
 	min-height: 100%;
 }
 
-:root {
-	--color-sidebar-bg: #1d3557;
-	--color-sidebar-fg: #ffffff;
-	--color-site-title: #55babd;
-
-	--wp--preset--color--orange: #e36137;
-}
-
 ::selection {
 	color: #121212;
 	background: #ffff66;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
 p,
 blockquote,
 address,
@@ -216,6 +202,8 @@ input::-moz-placeholder {
 	margin: 0;
 	-ms-word-break: break-word;
 	word-break: break-word;
+	padding-bottom: 4px;
+	border-bottom: 2px solid var(--wp--preset--color--dark-blue);
 }
 
 .excerpt {
@@ -484,8 +472,8 @@ figcaption {
 }
 
 .site-header {
-	background: var(--color-sidebar-bg);
-	color: var(--color-sidebar-fg);
+	background: var(--wp--preset--color--dark-blue);
+	color: var(--wp--preset--color--white);
 	margin: 0 auto 0 auto;
 	padding: 2rem;
 	position: fixed;
@@ -502,7 +490,7 @@ figcaption {
 }
 
 .site-header a {
-	color: #fff;
+	color: var(--wp--preset--color--white);
 }
 
 .site-header a:hover g.letters path {
@@ -520,14 +508,14 @@ figcaption {
 }
 
 .site-title {
-	color: var(--color-site-title);
+	color: var(--wp--preset--color--cyan);
 	font-size: 2rem;
 	font-weight: 700;
 	margin: 1rem 0 0 0;
 }
 
 .site-description {
-	color: var(--color-sidebar-fg);
+	color: var(--wp--preset--color--white);
 	margin-top: 8px;
 }
 
@@ -606,7 +594,7 @@ h3.section-title {
 
 h3.section-title a,
 h3.section-title a:visited {
-	color: var(--color-sidebar-fg);
+	color: var(--wp--preset--color--white);
 }
 
 .main-menu {
@@ -616,7 +604,7 @@ h3.section-title a:visited {
 }
 
 .main-menu a {
-	color: var(--color-sidebar-fg);
+	color: var(--wp--preset--color--white);
 	border-bottom: 1px solid transparent;
 	text-decoration: none;
 }
@@ -792,14 +780,21 @@ h3.posts-category-title {
 .entry-header .excerpt {
 	margin-top: 15px;
 }
-
-.meta {
-	color: #767676;
-	margin-top: 8px;
+table.meta {
+	max-width: 360px;
 }
 
-.meta > * + * {
-	margin-left: 23px;
+table.meta tr {
+	background: none;
+}
+
+table.meta td {
+	padding: 2px 4px;
+}
+
+.meta {
+	color: var(--wp--preset--color--dark-gray);
+	margin-top: 8px;
 }
 
 .meta a {

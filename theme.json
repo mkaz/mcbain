@@ -15,9 +15,14 @@
                     "color": "#ffffff"
                 },
                 {
+                    "name": "Dark Gray",
+                    "slug": "dark-gray",
+                    "color": "#777"
+                },
+                {
                     "name": "Gray",
                     "slug": "gray",
-                    "color": "#999"
+                    "color": "#BBB"
                 },
                 {
                     "name": "Dark Blue",
@@ -121,8 +126,14 @@
                     "margin": {
                         "top": "3rem",
                         "right": "0",
+                        "bottom": "2rem",
+                        "left": "0"
+                    },
+                    "padding": {
+                        "top": "0",
+                        "right": "0",
                         "bottom": "0",
-                        "left": "2rem"
+                        "left": "0"
                     }
                 }
             },
@@ -136,8 +147,14 @@
                     "margin": {
                         "top": "3rem",
                         "right": "0",
+                        "bottom": "2rem",
+                        "left": "0"
+                    },
+                    "padding": {
+                        "top": "0",
+                        "right": "0",
                         "bottom": "0",
-                        "left": "2rem"
+                        "left": "0"
                     }
                 }
             },
@@ -151,8 +168,14 @@
                     "margin": {
                         "top": "3rem",
                         "right": "0",
+                        "bottom": "2rem",
+                        "left": "0"
+                    },
+                    "padding": {
+                        "top": "0",
+                        "right": "0",
                         "bottom": "0",
-                        "left": "2rem"
+                        "left": "0"
                     }
                 }
             },
@@ -166,8 +189,14 @@
                     "margin": {
                         "top": "3rem",
                         "right": "0",
+                        "bottom": "2rem",
+                        "left": "0"
+                    },
+                    "padding": {
+                        "top": "0",
+                        "right": "0",
                         "bottom": "0",
-                        "left": "2rem"
+                        "left": "0"
                     }
                 }
             },
@@ -181,8 +210,14 @@
                     "margin": {
                         "top": "3rem",
                         "right": "0",
+                        "bottom": "2rem",
+                        "left": "0"
+                    },
+                    "padding": {
+                        "top": "0",
+                        "right": "0",
                         "bottom": "0",
-                        "left": "2rem"
+                        "left": "0"
                     }
                 }
             },
@@ -196,8 +231,14 @@
                     "margin": {
                         "top": "3rem",
                         "right": "0",
+                        "bottom": "2rem",
+                        "left": "0"
+                    },
+                    "padding": {
+                        "top": "0",
+                        "right": "0",
                         "bottom": "0",
-                        "left": "2rem"
+                        "left": "0"
                     }
                 }
             }

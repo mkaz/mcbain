@@ -1,10 +1,7 @@
 <?php
 /**
- * The template for displaying archive pages
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- * @package miningtown
- * @since 1.0.0
- */
+  * @package mcbain
+  */
 
 global $wp_the_query;
 $wp_the_query->posts = array_reverse($wp_the_query->posts);

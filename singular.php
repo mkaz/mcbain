@@ -26,41 +26,47 @@ if ( have_posts() ) :
 				// Only output post meta data on single
 				if ( is_single() || is_attachment() ) : ?>
 
-					<div class="meta">
-						<?php
-							if ( get_the_time( 'Ymd' ) !== get_the_modified_time( 'Ymd' ) ) {
-								$label = "Updated: ";
-								$time_string = sprintf(
-									'<time class="entry-date updated" datetime="%1$s">%2$s</time>',
-									esc_attr( get_the_modified_date( DATE_W3C ) ),
-									esc_html( get_the_modified_date() )
-								);
-							} else {
-								$label = "Created: ";
+					<table class="meta">
+						<tr>
+							<td width="35%"> Published on: </td>
+							<td><?php
 								$time_string = sprintf(
 									'<time class="entry-date published" datetime="%1$s">%2$s</time>',
 									esc_attr( get_the_date( DATE_W3C ) ),
 									esc_html( get_the_date() )
 								);
-							}
-
-							printf(
-								'<span class="posted-on">%1$s<a href="%2$s" rel="bookmark">%3$s</a></span>',
-								$label,
-								esc_url( get_permalink() ),
-								$time_string
-							);
-						?>
-
-						<?php if ( ! is_attachment() ) : ?>
-							<span>
-								<?php
-								echo __( 'In', 'mcbain' ) . ' ';
-								the_category( ', ' );
+								printf(
+									'<span class="posted-on"><a href="%1$s" rel="bookmark">%2$s</a></span>',
+									esc_url( get_permalink() ),
+									$time_string
+								);
+								?>							
+							</td>
+						</tr>
+						<?php if ( get_the_time( 'Ymd' ) !== get_the_modified_time( 'Ymd' ) ) : ?>
+						<tr>
+							<td> Last Updated: </td>
+							<td><?php
+								$time_string = sprintf(
+									'<time class="entry-date updated" datetime="%1$s">%2$s</time>',
+									esc_attr( get_the_modified_date( DATE_W3C ) ),
+									esc_html( get_the_modified_date() )
+								);
+								printf(
+									'<span class="updated-on">%1$s</span>',
+									$time_string
+								);								
 								?>
-							</span>
+							</td>
+						</tr>
 						<?php endif; ?>
-					</div>
+						<?php if ( ! is_attachment() ) : ?>
+						<tr>
+							<td>Category: </td>
+							<td><?php the_category( ', ' ); ?></td>
+						</tr>
+						<?php endif; ?>
+					</table>
 				<?php endif; ?>
 			</header>
 

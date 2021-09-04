@@ -2,7 +2,7 @@
 /**
  * Template Name: Tutorial Page
  *
- * @package Miningtown
+ * @package mcbain
  *
  */
 
