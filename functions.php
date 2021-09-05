@@ -62,7 +62,6 @@ add_action( 'wp_enqueue_scripts', function() {
 	wp_enqueue_style( 'mcbain-style', get_template_directory_uri() . '/style.css', $dependencies, $theme_version );
 } );
 
-add_filter( 'use_default_gallery_style', '__return_false' );
 
 add_action( 'wp_enqueue_scripts', function() {
 
@@ -355,35 +354,13 @@ if ( ! function_exists( 'mcbain_comment' ) ) :
 endif; // End if().
 
 
-/* ---------------------------------------------------------------------------------------------
-   SPECIFY BLOCK EDITOR SUPPORT
------------------------------------------------------------------------------------------------- */
 
-if ( ! function_exists( 'mcbain_add_block_editor_features' ) ) :
-	function mcbain_add_block_editor_features() {
-
-		/* Block Editor Features ------------- */
+/* Block Editor Features ------------- */
+add_action( 'after_setup_theme', function() {
 		add_theme_support( 'align-wide' );
 		add_theme_support( 'responsive-embeds' );
-
-	}
-	add_action( 'after_setup_theme', 'mcbain_add_block_editor_features' );
-endif;
-
-
-
-add_action( 'enqueue_block_editor_assets', function() {
-
-	$theme_version = wp_get_theme( 'mcbain' )->get( 'Version' );
-
-	// Enqueue the editor styles
-	wp_enqueue_style(
-		'mcbain-block-editor-styles',
-		get_theme_file_uri( '/style-editor.css' ),
-		array(),
-		$theme_version,
-		'all'
-	);
+		add_theme_support( 'editor-styles' );
+		add_editor_style( 'style-editor.css' );
 
 } );
 
@@ -392,6 +369,7 @@ add_action( 'enqueue_block_editor_assets', function() {
 add_filter( 'mkaz_code_syntax_language_list', function() {
 	return array(
 		"bash" => "Bash/Shell",
+		"css" => "CSS",
 		"go" => "Go",
 		"html" => "HTML",
 		"javascript" => "JavaScript",
