@@ -40,10 +40,18 @@ if ( have_posts() ) :
 									esc_url( get_permalink() ),
 									$time_string
 								);
-								?>							
+								?>
 							</td>
 						</tr>
-						<?php if ( get_the_time( 'Ymd' ) !== get_the_modified_time( 'Ymd' ) ) : ?>
+						<?php
+						/* I only want to show the updated date if it is beyond 14 days
+						 * from the published date. So minor typo fixes and issues soon
+						 * after published don't trigger an updated.
+						 * date format 'z' => day of year (0-365)
+						 **/
+						$published_days = get_the_time('Y') * 365 + get_the_time('z');
+						$updated_days = get_the_modified_time('Y') * 365 + get_the_modified_time('z');
+						if ( ( $updated_days - $published_days ) > 14  ) : ?>
 						<tr>
 							<td> Last Updated: </td>
 							<td><?php
@@ -55,7 +63,7 @@ if ( have_posts() ) :
 								printf(
 									'<span class="updated-on">%1$s</span>',
 									$time_string
-								);								
+								);
 								?>
 							</td>
 						</tr>
