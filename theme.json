@@ -97,6 +97,11 @@
         }
     },
     "styles": {
+        "typography": {
+            "fontSize": "var(--wp--preset--font-size--normal)",
+            "fontWeight": "400",
+            "fontStyle": "normal"
+        },
         "blocks": {
             "core/quote": {
                 "spacing": {
