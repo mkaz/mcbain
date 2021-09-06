@@ -691,29 +691,34 @@ h3.section-title a:visited {
 }
 
 .archive-pagination {
-	margin-top: 100px;
+	max-width: 420px;
+	margin: 3rem auto;
 }
 
-.archive-pagination .previous-posts-link {
-	float: left;
-}
-.archive-pagination .next-posts-link {
-	float: right;
+.archive-pagination .nav-links {
+	display: flex;
+	justify-content: center;
 }
 
-.archive-pagination a {
-	color: rgba(0, 0, 0, 0.35);
-	text-decoration: none;
+.archive-pagination .page-numbers {
+	margin: 0 16px;
+	padding: 4px 8px;
+	border: 1px solid var(--wp--preset--color--gray);
 }
 
-.archive-pagination a:hover {
-	color: #121212;
+.archive-pagination .page-numbers.next,
+.archive-pagination .page-numbers.prev,
+.archive-pagination .page-numbers.next:hover,
+.archive-pagination .page-numbers.prev:hover {
+	color: inherit;
+	background-color: inherit;
+	border: none;
 }
 
-.archive-pagination h4 {
-	font-size: inherit;
-	font-weight: inherit;
-	margin: 0;
+.archive-pagination .page-numbers:hover,
+.archive-pagination .page-numbers.current {
+	background-color: var(--wp--preset--color--orange);
+	color: var(--wp--preset--color--white);
 }
 
 .filter-list {
@@ -1698,10 +1703,6 @@ input.search-field::-moz-placeholder {
 
 	.comment .comment {
 		margin-left: 30px;
-	}
-
-	.archive-pagination {
-		margin-top: 50px;
 	}
 
 	.error404 .search-form {
