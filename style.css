@@ -602,6 +602,29 @@ h3.section-title a:visited {
 	margin: 32px 0;
 }
 
+.widget h3 {
+	font-size: var(--wp--preset--font-size--normal);
+	margin-bottom: 16px;
+	border-bottom: 1px solid var(--wp--preset--color--white);
+}
+
+.widget ul {
+	margin: 0 0 0 1em;
+	padding: 0;
+}
+
+.widget li {
+	margin: 12px 0;
+}
+
+.widget li a {
+	text-decoration: none;
+}
+
+.widget li a:hover {
+	text-decoration: underline;
+}
+
 .page-header {
 	padding: 2.6667rem 0;
 }
