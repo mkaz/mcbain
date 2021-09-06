@@ -31,13 +31,11 @@ $archive_description 	= get_the_archive_description();
 
 <?php if ( have_posts() ) : ?>
 	<div class="posts" id="posts">
-		<ul>
-			<?php
-			while ( have_posts() ) : the_post();
-				get_template_part( 'content', get_post_type() );
-			endwhile;
-			?>
-		</ul>
+		<?php
+		while ( have_posts() ) : the_post();
+			get_template_part( 'content', get_post_type() );
+		endwhile;
+		?>
 	</div>
 <?php endif; ?>
 
