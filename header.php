@@ -8,11 +8,7 @@
 	</head>
 	<body <?php body_class(); ?>>
 
-		<?php
-		if ( function_exists( 'wp_body_open' ) ) {
-			wp_body_open();
-		}
-		?>
+		<?php wp_body_open(); ?>
 
 		<a class="skip-link button" href="#site-content"><?php _e( 'Skip to the content', 'mcbain' ); ?></a>
 
@@ -20,7 +16,7 @@
 
 			<div class="site-title">
 				<a href="<?php echo esc_url( home_url() ); ?>" class="site-name">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/mkaz-logo.svg" title="mkaz.blog logo"/>
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/mkaz-logo.svg" title="mkaz.blog logo" class="site-logo"/>
 				</a>
 			</div>
 
@@ -48,14 +44,6 @@
 
 						wp_nav_menu( $main_menu_args );
 
-					} else {
-
-						$fallback_args = array(
-							'container' => '',
-							'title_li' 	=> '',
-						);
-
-						wp_list_pages( $fallback_args );
 					}
 					?>
 				</ul>

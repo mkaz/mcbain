@@ -17,13 +17,18 @@
                 {
                     "name": "Dark Gray",
                     "slug": "dark-gray",
-                    "color": "#666"
+                    "color": "#666666"
                 },
                 {
                     "name": "Gray",
                     "slug": "gray",
-                    "color": "#BBB"
+                    "color": "#BBBBBB"
                 },
+                {
+                    "name": "Light Gray",
+                    "slug": "light-gray",
+                    "color": "#EEEEEE"
+                },                
                 {
                     "name": "Dark Blue",
                     "slug": "dark-blue",
