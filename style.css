@@ -164,14 +164,6 @@ img {
 	max-width: 100%;
 }
 
-.posts:after,
-.group:after,
-.pagination:after,
-.entry-content:after {
-	clear: both;
-	content: "";
-	display: block;
-}
 
 input::-webkit-input-placeholder {
 	color: rgba(0, 0, 4, 0.4);
@@ -627,9 +619,10 @@ h3.section-title a:visited {
 
 .site-footer {
 	display: flex;
-	margin-top: 100px;
-	padding: 2.0rem 0 4.0rem 2.0rem;
-	border-top: 1px solid rgba(0, 0, 4, 0.125);
+	background-color: var(--wp--preset--color--dark-blue);
+	color: var(--wp--preset--color--white);
+	margin-top: 0;
+	padding: 4rem 0 4rem 2rem;
 	font-size: 0.8889rem;
 	justify-content: space-between;
 	text-align: center;
@@ -691,6 +684,12 @@ h3.section-title a:visited {
 
 .page-header .search-form {
 	margin-top: 20px;
+}
+
+.posts {
+	max-width: var(--mkaz--layout--content-size);
+	margin-left: auto;
+	margin-right: auto;	
 }
 
 .posts:first-child {
@@ -1016,6 +1015,13 @@ article .entry-content {
     margin-right: 2em;
 }
 
+.entry-content:after {
+	clear: both;
+	content: "";
+	display: block;
+}
+
+
 .entry-footer {
 	margin-top: 3rem;
 	padding-top: 1rem;
@@ -1064,7 +1070,7 @@ input.search-field::-moz-placeholder {
 	position: relative;
 	background-color:  var(--wp--preset--color--light-gray);
 	border-top: 1px solid var(--wp--preset--color--dark-gray);
-	padding: 2.0rem 1.0rem 1.0rem 1.0rem;
+	padding: 2.0rem 1.0rem 3.0rem 1.0rem;
 }
 
 .comments > *,
@@ -1083,6 +1089,11 @@ input.search-field::-moz-placeholder {
 .comments > .comment:first-of-type,
 .comments > .pingback:first-of-type {
 	margin-top: 0;
+}
+
+.comments h3,
+.comment-respond h3 {
+	margin-top: 1rem;
 }
 
 .comment .comment {
@@ -1216,6 +1227,12 @@ input.search-field::-moz-placeholder {
 	width: calc(50% - 10px);
 }
 
+.comment-respond:after {
+	clear: both;
+	content: "";
+	display: block;
+}
+
 .comment-respond .comment-form-email {
 	margin-left: 20px;
 }
@@ -1264,15 +1281,21 @@ input.search-field::-moz-placeholder {
 	margin-bottom: 30px;
 }
 
-@media (max-width: 750px) {
-
-	.site-nav .menus > ul {
-		float: none;
-		width: 100%;
-	}
+@media (max-width: 760px) {
 
 	.site-nav .menus > ul + ul {
 		margin: 40px 0 0;
+	}
+
+	/* When content smaller than max, give some padding,
+	   so not against the ege of the screen. Particularly needed
+	   for comments which has a background color we do want to go
+	   to the edge */
+	article,
+	.comments,
+	.comment-respond {
+		padding-left: 2%;
+		padding-right: 2%;
 	}
 
 	.comment-author .avatar {
