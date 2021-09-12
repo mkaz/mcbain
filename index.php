@@ -7,12 +7,10 @@ $archive_title 			= get_the_archive_title();
 $archive_description 	= get_the_archive_description();
 ?>
 
-<header class="page-header">
-	<?php if ( $archive_title || $archive_description ) : ?>
+<?php if ( ! is_home() ) : ?>
+	<header class="page-header">
 
-		<?php if ( $archive_type ) : ?>
-			<h4 class="page-subtitle"><?php echo wp_kses_post( $archive_type ); ?></h4>
-		<?php endif; ?>
+		<h4 class="page-subtitle"><?php echo wp_kses_post( $archive_type ); ?></h4>
 
 		<?php if ( $archive_title ) : ?>
 			<<?php echo $archive_title_elem; ?> class="page-title"><?php echo wp_kses_post( $archive_title ); ?></<?php echo $archive_title_elem; ?>>
@@ -26,8 +24,8 @@ $archive_description 	= get_the_archive_description();
 
 		<?php if ( is_search() && ! have_posts() ) get_search_form(); ?>
 
-	<?php endif; ?>
-</header>
+	</header>
+<?php endif; ?>
 
 <?php if ( have_posts() ) : ?>
 	<div class="posts" id="posts">

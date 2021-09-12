@@ -21,3 +21,14 @@ code {
 	margin-bottom: 2rem;
 	padding: 16px;
 }
+
+.wp-caption {
+	display: block;
+	max-width: 100%;
+}
+
+figcaption {
+	font-size: 0.8333rem;
+	margin: 8px 0 0;
+	color: #666666;
+}

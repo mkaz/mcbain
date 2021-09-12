@@ -8,38 +8,27 @@
 	</head>
 	<body <?php body_class(); ?>>
 
-		<?php
-		if ( function_exists( 'wp_body_open' ) ) {
-			wp_body_open();
-		}
-		?>
+		<?php wp_body_open(); ?>
 
 		<a class="skip-link button" href="#site-content"><?php _e( 'Skip to the content', 'mcbain' ); ?></a>
 
-		<header class="site-header group">
+		<header class="site-header">
 
-			<div class="site-title">
-				<a href="<?php echo esc_url( home_url() ); ?>" class="site-name">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/mkaz-logo.svg" title="mkaz.blog logo"/>
-				</a>
+			<div class="site-branding">
+				<div class="site-title">
+					<a href="<?php echo esc_url( home_url() ); ?>" class="site-name">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/mkaz-logo.svg" title="mkaz.blog logo" class="site-logo"/>
+					</a>
+				</div>
+
+				<?php if ( get_bloginfo( 'description' ) ) : ?>
+					<div class="site-description"><?php echo get_bloginfo( 'description' ); ?></div>
+				<?php endif; ?>
 			</div>
 
-			<?php if ( get_bloginfo( 'description' ) ) : ?>
-				<div class="site-description"><?php echo get_bloginfo( 'description' ); ?></div>
-			<?php endif; ?>
-
-			<input id="nav-toggle" type="checkbox"/>
-			<label class="flipper" for="nav-toggle">
-				<div class="bar bar1"></div>
-				<div class="bar bar2"></div>
-			</label>
-
-			<div class="menu-wrapper">
+			<?php if ( has_nav_menu( 'main-menu' ) ) : ?>
 				<ul class="main-menu">
 					<?php
-
-					if ( has_nav_menu( 'main-menu' ) ) {
-
 						$main_menu_args = array(
 							'container' 		=> '',
 							'items_wrap' 		=> '%3$s',
@@ -47,24 +36,24 @@
 						);
 
 						wp_nav_menu( $main_menu_args );
-
-					} else {
-
-						$fallback_args = array(
-							'container' => '',
-							'title_li' 	=> '',
-						);
-
-						wp_list_pages( $fallback_args );
-					}
 					?>
 				</ul>
+			<?php endif; ?>
 
-				<div class="widget-section">
-					<?php dynamic_sidebar("sidebar"); ?>
-				</div>
+			<div class="toggle-group">
+				<input id="nav-toggle" type="checkbox" />
+				<label class="flipper" for="nav-toggle">
+					<div class="bar bar1"></div>
+					<div class="bar bar2"></div>
+				</label>
 			</div>
 
 		</header>
+		
+		<aside id="widgets">
+			<div class="widget-section">
+				<?php dynamic_sidebar("sidebar"); ?>
+			</div>
+		</aside>
 
 		<main class="site-content" id="site-content">

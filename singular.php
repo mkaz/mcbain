@@ -82,52 +82,52 @@ if ( have_posts() ) :
 				<?php the_content(); ?>
 			</div>
 
-			<?php
 
-			wp_link_pages( array(
-				'before' => '<p class="linked-pages">' . __( 'Pages', 'mcbain' ) . ':',
-			) );
-
-			if ( $post_type == 'post' && get_the_tags() ) : ?>
-
-				<div class="meta bottom">
-					<p class="tags"><?php the_tags( ' #', ' #', ' ' ); ?></p>
-				</div> <!-- .meta -->
-
+			<footer class="entry-footer">
 				<?php
-			endif;
 
-			// Check for single post pagination
-			if ( is_single() && ! is_attachment() && ( get_previous_post_link() || get_next_post_link() ) ) : ?>
+				wp_link_pages( array(
+					'before' => '<p class="linked-pages">' . __( 'Pages', 'mcbain' ) . ':',
+				) );
 
-				<div class="post-pagination">
+				if ( $post_type == 'post' && get_the_tags() ) : ?>
 
-					<div class="previous-post">
-						<?php if ( get_previous_post_link() ) : ?>
-							<?php echo get_previous_post_link( '%link', '<span>%title</span>' ); ?>
-						<?php endif; ?>
-					</div>
+					<div class="meta bottom">
+						<p class="tags"><?php the_tags( ' #', ' #', ' ' ); ?></p>
+					</div> <!-- .meta -->
 
-					<div class="next-post">
-						<?php if ( get_next_post_link() ) : ?>
-							<?php echo get_next_post_link( '%link', '<span>%title</span>' ); ?>
-						<?php endif; ?>
-					</div>
+					<?php
+				endif;
 
-				</div><!-- .post-pagination -->
+				// Check for single post pagination
+				if ( is_single() && ! is_attachment() && ( get_previous_post_link() || get_next_post_link() ) ) : ?>
 
-			<?php endif;
+					<div class="post-pagination">
 
-			// Output comments wrapper if comments are open, or if there's a comment number – and check for password
-			if ( ( comments_open() || get_comments_number() ) && ! post_password_required() ) : ?>
+						<div class="previous-post">
+							<?php if ( get_previous_post_link() ) : ?>
+								<?php echo get_previous_post_link( '%link', '<span>%title</span>' ); ?>
+							<?php endif; ?>
+						</div>
 
-				<?php comments_template(); ?>
+						<div class="next-post">
+							<?php if ( get_next_post_link() ) : ?>
+								<?php echo get_next_post_link( '%link', '<span>%title</span>' ); ?>
+							<?php endif; ?>
+						</div>
 
-			<?php endif; ?>
+					</div><!-- .post-pagination -->
 
-		</div>
+				<?php endif; ?>
+			</footer>
+		</article>
 
 		<?php
+		// Output comments wrapper if comments are open, or if there's a comment number – and check for password
+		if ( ( comments_open() || get_comments_number() ) && ! post_password_required() ) :
+			comments_template();
+		endif;
+
 
 	endwhile;
 
