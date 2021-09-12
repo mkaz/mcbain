@@ -9,11 +9,11 @@
 $parent_id = ( $post->post_parent ) ? $post->post_parent : $post->ID;
 $parent = get_post( $parent_id );
 
+
 add_filter( 'document_title_parts', function( $title ) {
 	global $post, $parent;
-	$parent_title = ( isset($parent) && ($parent->ID != $post->ID) ) ? $parent->post_title . " - " : "";
-	$parent_title .= get_bloginfo( 'name' );
-	$title['site'] = $parent_title;
+	$parent_title = ( isset($parent) && ($parent->ID != $post->ID) ) ? $parent->post_title . "-" : "";
+	$title['site'] = $parent_title . get_bloginfo( 'name' );;
 	return $title;
 }, 10, 2 );
 
@@ -45,9 +45,13 @@ if ( $post->ID === $parent_id ) {
 ?>
 
 <?php get_header(); ?>
-
+	
 	<article <?php post_class(); ?>>
+		
 		<header class="entry-header">
+			<?php if ( $parent->ID != $post->ID ) : ?>
+				<h3> <?php echo $parent->post_title; ?> </h3>
+			<?php endif; ?>
 		</header>
 
 		<div class="entry-content">
