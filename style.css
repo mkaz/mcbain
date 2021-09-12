@@ -1133,7 +1133,11 @@ input.search-field::-moz-placeholder {
 
 .wp-block-search .wp-block-search__button {
 	max-height: 2.0rem;
-	border-radius: 8px;
+}
+
+.wp-block-search .wp-block-search__button:hover {
+	background-color: var(--wp--preset--color--orange);
+	color: var(--wp--preset--color--white);
 }
 
 
