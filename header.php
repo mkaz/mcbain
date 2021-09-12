@@ -50,10 +50,9 @@
 
 		</header>
 		
-		<aside id="widgets">
-			<div class="widget-section">
-				<?php dynamic_sidebar("sidebar"); ?>
-			</div>
-		</aside>
+		<?php 
+			$pagetemp = ( is_page_template() ) ? 'pagetut' : '';
+			get_template_part( 'template-parts/widgets', $pagetemp );
+		?>
 
 		<main class="site-content" id="site-content">

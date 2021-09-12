@@ -278,6 +278,7 @@ pre {
 
 pre.wp-block-code {
 	margin-bottom: 2rem;
+	overflow: inherit !important;
 }
 
 fieldset {
@@ -576,7 +577,7 @@ input:checked ~ .flipper > .bar2 {
 	margin-top: 0;
 	margin-bottom: 16px;
 	text-decoration: underline;
-	text-decoration-skip: edges;
+	text-decoration-skip-ink: auto;
 }
 
 .widget ul {
@@ -633,7 +634,35 @@ h3.section-title a:visited {
 	border-bottom-color: #fff;
 }
 
+/* Widgets Table of Contents for Page Tutorial */
+@media (min-width: 1080px) {
+	.page-template-page-tut #widgets {
+		display: block;
+		background-color: var(--wp--preset--color--white);
+		color: var(--wp--preset--color--black);
+		float: left;
+		width: 160px;
+		margin-top: 1.7rem;
+		margin-left:  calc(50% - var(--mkaz--layout--content-size)*0.5 - 220px);
+		margin-right: 16px;
+	}
+	
+	.page-template-page-tut #widgets h3 {
+		margin: 0 0 0 -1rem;
+		border-bottom: 1px solid var(--wp--preset--color--dark-gray);
+	}
 
+	.page-template-page-tut #widgets ul {
+		margin-left: 0;
+		padding-left: 0;
+	}
+
+	.page-template-page-tut #widgets li a {
+		color: var(--wp--preset--color--black);
+		border-bottom: 1px solid transparent;
+		text-decoration: none;
+	}
+}
 
 .site-footer {
 	display: flex;
@@ -851,10 +880,12 @@ table.meta td {
 }
 
 .post-pagination {
+	max-width: var(--mkaz--layout--content-size);
+	margin: 5rem auto 5rem auto;
 	display: flex;
 	font-size: 1rem;
 	justify-content: space-between;
-	margin-top: 100px;
+	
 }
 
 .post-pagination div {
