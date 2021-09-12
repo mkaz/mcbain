@@ -320,7 +320,7 @@ textarea {
 	display: block;
 	font-size: 1em;
 	margin: 0 0 15px 0;
-	padding: 15px;
+	padding: 8px;
 	transition: border-color 0.15s linear;
 	-webkit-appearance: none;
 	width: 100%;
@@ -576,6 +576,8 @@ input:checked ~ .flipper > .bar2 {
 	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
+	display: flex;
+	justify-content: space-around;
 }
 
 .widget h3 {
@@ -710,7 +712,13 @@ h3.section-title a:visited {
 
 
 .page-header {
-	padding: 2.0rem 0 1.5rem 0;
+	max-width: var(--mkaz--layout--content-size);
+	margin-left: auto;
+	margin-right: auto;
+	padding: 2.0rem 0 2rem 0;
+	margin-bottom: 2rem;
+	border-bottom: 1px solid var(--wp--preset--color--gray);
+
 }
 
 .page-header:last-child {
@@ -1093,32 +1101,40 @@ article .entry-content {
 }
 
 input.search-field {
-	background: url(./assets/images/spyglass-white.svg) no-repeat left center;
+	background: url(./assets/images/spyglass-black.svg) no-repeat left center;
 	background-size: 26px auto;
-	border: none;
-	border-bottom: 1px solid #ffffff;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	border-bottom: 1px solid #121212;
+	outline: none;
+	color: #121212;
 	border-radius: 0;
 	box-shadow: none;
-	color: #ffffff;
 	font-size: 1em;
 	margin: 0;
-	outline: none;
 	width: 80%;
-	padding: 18px 0 18px 40px;
+	padding: 18px 8px 18px 40px;
 	-moz-appearance: none;
 	-webkit-appearance: none;
 }
 
 input.search-field::-webkit-input-placeholder {
-	color: #ffffff;
-}
-input.search-field:-ms-input-placeholder {
-	color: #ffffff;
-}
-input.search-field::-moz-placeholder {
-	color: #ffffff;
+	color:  var(--wp--preset--color--dark-gray);
 }
 
+input.search-field:-ms-input-placeholder {
+	color:  var(--wp--preset--color--dark-gray);
+}
+
+input.search-field::-moz-placeholder {
+	color:  var(--wp--preset--color--dark-gray);
+}
+
+.wp-block-search .wp-block-search__button {
+	max-height: 2.0rem;
+	border-radius: 8px;
+}
 
 
 /* Comments */
