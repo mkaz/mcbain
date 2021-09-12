@@ -1,7 +1,7 @@
 /*
 	Theme Name: McBain
     Text Domain: mcbain
-	Version: 1.4.2
+	Version: 1.4.3
 	Description: McBain is a fork of McLuhan by Anders Norén https://www.andersnoren.se
 	Author: Marcus Kazmierczak
 	Author URI: https://mkaz.blog/
@@ -487,9 +487,8 @@ figcaption {
 
 .site-logo {
 	max-width: 360px;
-	width: 100;
+	width: 100%;
 }
-
 
 .flipper {
 	cursor: pointer;
@@ -672,6 +671,11 @@ h3.section-title a:visited {
 		border-bottom: 1px solid transparent;
 		text-decoration: none;
 	}
+
+	.page-template-page-tut .widget-section {
+		display: block;
+	}
+
 }
 
 .site-footer {
@@ -1106,9 +1110,9 @@ input.search-field {
 	border-top: none;
 	border-right: none;
 	border-left: none;
-	border-bottom: 1px solid #121212;
+	border-bottom: 1px solid var(--wp--preset--color--black);
 	outline: none;
-	color: #121212;
+	color: var(--wp--preset--color--black);
 	border-radius: 0;
 	box-shadow: none;
 	font-size: 1em;
@@ -1131,6 +1135,27 @@ input.search-field::-moz-placeholder {
 	color:  var(--wp--preset--color--dark-gray);
 }
 
+.widget input.search-field {
+	background: url(./assets/images/spyglass-white.svg) no-repeat left center;
+	color: var(--wp--preset--color--white);
+	border-bottom: 1px solid var(--wp--preset--color--white);
+}
+
+.widget input.search-field::-webkit-input-placeholder {
+	color:  var(--wp--preset--color--white);
+}
+
+.widget input.search-field:-ms-input-placeholder {
+	color:  var(--wp--preset--color--white);
+}
+
+.widget input.search-field::-moz-placeholder {
+	color:  var(--wp--preset--color--white);
+}
+
+
+
+
 .wp-block-search .wp-block-search__button {
 	max-height: 2.0rem;
 }
@@ -1139,7 +1164,6 @@ input.search-field::-moz-placeholder {
 	background-color: var(--wp--preset--color--orange);
 	color: var(--wp--preset--color--white);
 }
-
 
 /* Comments */
 .comments,
