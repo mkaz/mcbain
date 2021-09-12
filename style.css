@@ -1,7 +1,7 @@
 /*
 	Theme Name: McBain
-    Text Domain: mcbain
-	Version: 1.4.3
+	Text Domain: mcbain
+	Version: 1.4.4
 	Description: McBain is a fork of McLuhan by Anders Norén https://www.andersnoren.se
 	Author: Marcus Kazmierczak
 	Author URI: https://mkaz.blog/
@@ -13,12 +13,6 @@
 	version 2.0 (http://www.gnu.org/licenses/gpl-2.0.html)
 */
 
-:root {
-	--mkaz--layout--content-size: 720px;
-	--mkaz--layout--wide-size: 960px;
-	--mkaz--color--link: #0044CC;
-}
-
 html {
 	font-size: 18px;
 }
@@ -29,9 +23,10 @@ body {
 	padding: 0;
 	height: 100%;
 	min-height: 100%;
+	font-weight: var(--wp--custom--normal-weight);
 }
 
-::seletcion {
+::selection {
 	color: var(--wp--preset--color--black);
 	background: #ffff66;
 }
@@ -102,7 +97,6 @@ input[type="search"]::-webkit-search-results-decoration {
 	color: #21759b;
 	display: block;
 	font-size: 0.7778rem;
-	font-weight: 700;
 	height: auto;
 	left: 5px;
 	line-height: normal;
@@ -139,7 +133,7 @@ body {
 	border: none;
 	color: var(--wp--preset--color--black);
 	font-size: 1rem;
-	font-family: "Noto Serif", "Droid Serif", Georgia, serif;
+	font-family: "IBM Plex Sans", "Noto Sans", sans-serif;
 }
 
 body * {
@@ -183,7 +177,7 @@ input::-moz-placeholder {
 
 .entry-title {
 	font-size: 1.7778rem;
-	font-weight: 700;
+	font-weight: var(--wp--custom--bold-weight);
 	letter-spacing: -0.45px;
 	line-height: 1.25;
 	margin: 0;
@@ -243,19 +237,6 @@ li {
 	margin-top: 15px;
 }
 
-dd,
-dt {
-	line-height: 1.5;
-}
-
-dt {
-	font-weight: 700;
-}
-
-dd + dt {
-	margin-top: 15px;
-}
-
 pre,
 code {
 	font-family: Hack, SFMono-Regular, Consolas, "Liberation Mono", Menlo, Inconsolata,
@@ -288,7 +269,7 @@ fieldset {
 
 fieldset legend {
 	font-size: 0.8889rem;
-	font-weight: 700;
+	font-weight: var(--wp--custom--bold-weight);
 	margin-left: -15px;
 	padding: 0 15px;
 }
@@ -342,7 +323,7 @@ input[type="submit"] {
 	display: inline-block;
 	font-family: inherit;
 	font-size: 0.8889rem;
-	font-weight: 700;
+	font-weight: var(--wp--custom--bold-weight);
 	padding: 0.5rem 1.0rem;
 	text-align: center;
 	text-decoration: none;
@@ -366,7 +347,7 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 	empty-cells: show;
-	font-size: 0.8889rem;
+	font-size: var(--wp--preset--font-size--small);
 	margin-bottom: 30px;
 	max-width: 100%;
 	overflow: hidden;
@@ -383,7 +364,7 @@ td {
 
 caption {
 	font-size: 0.7778rem;
-	font-weight: 700;
+	font-weight: var(--wp--custom--bold-weight);
 	padding-bottom: 2.5%;
 	text-align: center;
 	text-transform: uppercase;
@@ -395,7 +376,7 @@ thead {
 }
 
 th {
-	font-weight: 700;
+	font-weight: var(--wp--custom--bold-weight);
 }
 
 tbody > tr:nth-child(odd) {
@@ -476,7 +457,7 @@ figcaption {
 .site-title {
 	color: var(--wp--preset--color--cyan);
 	font-size: 2rem;
-	font-weight: 700;
+	font-weight: var(--mkaz-weight--color);
 	margin: 1rem 0 0 0;
 }
 
@@ -567,11 +548,11 @@ input:checked ~ .flipper > .bar2 {
 
 .visible {
 	display: block !important;
-	animation: showWidgetsAnim 250ms ease-in-out both;	
+	animation: showWidgetsAnim 250ms ease-in-out both;
 }
 
 .widget-section {
-	max-width: var(--mkaz--layout--content-size);
+	max-width: var(--wp--custom--content-size);
 	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
@@ -650,10 +631,10 @@ h3.section-title a:visited {
 		float: left;
 		width: 160px;
 		margin-top: 6rem;
-		margin-left:  calc(50% - var(--mkaz--layout--content-size)*0.5 - 220px);
+		margin-left:  calc(50% - var(--wp--custom--content-size)*0.5 - 220px);
 		margin-right: 16px;
 	}
-	
+
 	.page-template-page-tut #widgets h3 {
 		font-size: 1.0rem;
 		margin: 0 0 0 -1rem;
@@ -716,7 +697,7 @@ h3.section-title a:visited {
 
 
 .page-header {
-	max-width: var(--mkaz--layout--content-size);
+	max-width: var(--wp--custom--content-size);
 	margin-left: auto;
 	margin-right: auto;
 	padding: 2.0rem 0 2rem 0;
@@ -754,9 +735,9 @@ h3.section-title a:visited {
 }
 
 .posts {
-	max-width: var(--mkaz--layout--content-size);
+	max-width: var(--wp--custom--content-size);
 	margin-left: auto;
-	margin-right: auto;	
+	margin-right: auto;
 }
 
 .posts:first-child {
@@ -842,7 +823,7 @@ body.single article {
 
 .entry-header {
 	margin: 3rem auto 2.5rem auto;
-	max-width: var(--mkaz--layout--content-size);
+	max-width: var(--wp--custom--content-size);
 }
 
 .entry-header .excerpt {
@@ -862,6 +843,7 @@ table.meta td {
 
 .meta {
 	color: var(--wp--preset--color--dark-gray);
+	font-size: var(--wp--preset--font-size--small);
 	margin-top: 8px;
 }
 
@@ -900,12 +882,12 @@ table.meta td {
 }
 
 .post-pagination {
-	max-width: var(--mkaz--layout--content-size);
+	max-width: var(--wp--custom--content-size);
 	margin: 5rem auto 5rem auto;
 	display: flex;
 	font-size: 1rem;
 	justify-content: space-between;
-	
+
 }
 
 .post-pagination div {
@@ -919,7 +901,7 @@ table.meta td {
 
 .post-pagination a {
 	display: block;
-	font-weight: 700;
+	font-weight: var(--wp--custom--bold-weight);
 	position: relative;
 	text-decoration: none;
 	-ms-word-break: break-word;
@@ -1036,7 +1018,7 @@ hr {
 }
 
 .entry-content a {
-	color: var(--mkaz--color--link);
+	color: var(--wp--custom--color-link);
 	text-decoration: none;
 }
 
@@ -1061,13 +1043,13 @@ article .entry-content {
 }
 
 .entry-content > * {
-    max-width: var(--mkaz--layout--content-size);
+    max-width: var(--wp--custom--content-size);
     margin-left: auto !important;
     margin-right: auto !important;
 }
 
 .entry-content > .alignwide {
-    max-width: var(--mkaz--layout--wide-size);
+    max-width: var(--wp--custom--wide-size);
 }
 
 .entry-content > .alignfull {
@@ -1095,7 +1077,7 @@ article .entry-content {
 	margin-top: 3rem;
 	padding-top: 1rem;
 	border-top: 1px solid var(--wp--preset--color--gray);
-	max-width: var(--mkaz--layout--content-size);
+	max-width: var(--wp--custom--content-size);
     margin-left: auto !important;
     margin-right: auto !important;
 }
@@ -1176,7 +1158,7 @@ input.search-field::-moz-placeholder {
 
 .comments > *,
 .comment-respond > * {
-	max-width: var(--mkaz--layout--content-size);
+	max-width: var(--wp--custom--content-size);
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -1218,7 +1200,7 @@ input.search-field::-moz-placeholder {
 }
 
 .comment-author cite {
-	font-weight: 700;
+	font-weight: var(--wp--custom--bold-weight);
 }
 
 .comment-author cite a {
@@ -1257,7 +1239,7 @@ input.search-field::-moz-placeholder {
 	letter-spacing: 0.05em;
 	margin-top: 22px;
 	text-transform: uppercase;
-	font-weight: 700;
+	font-weight: var(--wp--custom--bold-weight);
 }
 
 .comment .reply a:hover {
@@ -1287,7 +1269,7 @@ input.search-field::-moz-placeholder {
 }
 
 .comments-pagination .current {
-	font-weight: 700;
+	font-weight: var(--wp--custom--bold-weight);
 }
 
 .comments-pagination .prev,
@@ -1366,7 +1348,7 @@ input.search-field::-moz-placeholder {
 .comments .comment-respond .comment-reply-title small a {
 	color: #999;
 	font-size: 0.8em;
-	font-weight: 700;
+	font-weight: var(--wp--custom--bold-weight);
 	margin-left: 5px;
 }
 

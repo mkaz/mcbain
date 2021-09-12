@@ -53,11 +53,10 @@ add_action( 'wp_enqueue_scripts', function() {
 
 	$dependencies = array();
 	$theme_version = wp_get_theme( 'mcbain' )->get( 'Version' );
-	$theme_version = rand(0, 999999);
-	
+
 	wp_enqueue_style(
 		'mcbain-font-style',
-		'https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap'
+		'https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap'
 	);
 
 	wp_enqueue_style( 'mcbain-style', get_template_directory_uri() . '/style.css', $dependencies, $theme_version );

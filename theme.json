@@ -28,7 +28,7 @@
                     "name": "Light Gray",
                     "slug": "light-gray",
                     "color": "#EEEEEE"
-                },                
+                },
                 {
                     "name": "Dark Blue",
                     "slug": "dark-blue",
@@ -99,7 +99,15 @@
                     "name": "Huge"
                 }
             ]
-        }
+        },
+		"custom": {
+			"bold-weight": "700",
+			"normal-weight": "400",
+			"font-family": "'IBM Plex Sans', 'Noto Sans', sans-serif",
+			"content-size": "720px",
+            "wide-size": "960px",
+	        "color-link": "#0044CC"
+		}
     },
     "styles": {
         "typography": {
@@ -129,7 +137,7 @@
             "h1": {
                 "typography": {
                     "fontSize": "var(--wp--preset--font-size--huge)",
-                    "fontWeight": "700",
+                    "fontWeight": "var(--wp--custom--bold-weight)",
                     "fontStyle": "normal"
                 },
                 "spacing": {
@@ -150,7 +158,7 @@
             "h2": {
                 "typography": {
                     "fontSize": "var(--wp--preset--font-size--extra-large)",
-                    "fontWeight": "700",
+                    "fontWeight": "var(--wp--custom--bold-weight)",
                     "fontStyle": "normal"
                 },
                 "spacing": {
@@ -171,7 +179,7 @@
             "h3": {
                 "typography": {
                     "fontSize": "var(--wp--preset--font-size--large)",
-                    "fontWeight": "700",
+                    "fontWeight": "var(--wp--custom--bold-weight)",
                     "fontStyle": "normal"
                 },
                 "spacing": {
@@ -192,7 +200,7 @@
             "h4": {
                 "typography": {
                     "fontSize": "var(--wp--preset--font-size--normal)",
-                    "fontWeight": "700",
+                    "fontWeight": "var(--wp--custom--bold-weight)",
                     "fontStyle": "normal"
                 },
                 "spacing": {
@@ -213,7 +221,7 @@
             "h5": {
                 "typography": {
                     "fontSize": "var(--wp--preset--font-size--normal)",
-                    "fontWeight": "400",
+                    "fontWeight": "var(--wp--custom--normal-weight)",
                     "fontStyle": "normal"
                 },
                 "spacing": {
@@ -234,7 +242,7 @@
             "h6": {
                 "typography": {
                     "fontSize": "var(--wp--preset--font-size--small)",
-                    "fontWeight": "700",
+                    "fontWeight": "var(--wp--custom--bold-weight)",
                     "fontStyle": "normal"
                 },
                 "spacing": {
