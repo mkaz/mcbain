@@ -7,5 +7,14 @@
 
 		<?php wp_footer(); ?>
 
+		<script>
+			/* toggle for menu */
+			const toggle = document.getElementById('nav-toggle');
+			toggle.addEventListener( "click", function() {
+				const widgets = document.getElementById('widgets');
+				widgets.classList.toggle("visible");
+			} );
+
+		</script>
 	</body>
 </html>

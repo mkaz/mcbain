@@ -439,9 +439,9 @@ figcaption {
 	color: var(--wp--preset--color--white);
 	margin: 0 auto 0 auto;
 	padding: 1rem calc(7.5% + 50px) 2rem 7.5%;
-	position: relative;
 	width: 100%;
-	overflow: auto;
+	display: flex;
+	justify-content: space-between;
 }
 
 .site-header a {
@@ -455,6 +455,10 @@ figcaption {
 
 .site-header a:hover g.mark path {
 	stroke: #e361F7;
+}
+
+.site-branding {
+	margin-right: 2rem;
 }
 
 .site-title,
@@ -476,6 +480,7 @@ figcaption {
 
 .site-logo {
 	max-width: 360px;
+	width: 100;
 }
 
 
@@ -540,64 +545,38 @@ input:checked ~ .flipper > .bar2 {
 	transform: rotate(-45deg);
 }
 
-.menu-wrapper {
-	display:  none;
-	margin-top: 1rem;
-	padding-top: 2rem;
-	padding-bottom: 1.5rem;
-	width: 100%;
+#widgets {
+	display: none;
+	background-color: var(--wp--preset--color--dark-blue);
+	color: var(--wp--preset--color--white);
+	margin: 0;
+	padding: 2rem 1rem 2rem;
+	border-top: 1px solid white;
 }
 
-/* show menu when flipper toggled */
-input:checked ~ .menu-wrapper {
+@keyframes showWidgetsAnim {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.visible {
 	display: block !important;
-}
-
-
-h3.section-title {
-	font-size: 1rem;
-	margin: 0;
-}
-
-h3.section-title a,
-h3.section-title a:visited {
-	color: var(--wp--preset--color--white);
-}
-
-.main-menu {
-	margin: 0;
-	width: 100%;
-	list-style: none;
-}
-
-.main-menu a {
-	color: var(--wp--preset--color--white);
-	border-bottom: 1px solid transparent;
-	text-decoration: none;
-}
-
-.main-menu li {
-	line-height: 1.25;
-	margin-bottom: 12px;
-}
-
-.main-menu .current-menu-item > a,
-.main-menu a:hover {
-	border-bottom-color: #fff;
-}
-
-.main-menu ul {
-	margin: 12px 0 0 25px;
+	animation: showWidgetsAnim 250ms ease-in-out both;	
 }
 
 .widget-section {
-	margin: 32px 0;
+	max-width: var(--mkaz--layout--content-size);
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .widget h3 {
 	font-size: var(--wp--preset--font-size--normal);
+	margin-top: 0;
 	margin-bottom: 16px;
-	border-bottom: 1px solid var(--wp--preset--color--white);
+	text-decoration: underline;
+	text-decoration-skip: edges;
 }
 
 .widget ul {
@@ -616,6 +595,45 @@ h3.section-title a:visited {
 .widget li a:hover {
 	text-decoration: underline;
 }
+
+
+h3.section-title {
+	font-size: 1rem;
+	margin: 0;
+}
+
+h3.section-title a,
+h3.section-title a:visited {
+	color: var(--wp--preset--color--white);
+}
+
+.main-menu {
+	margin: 0;
+	list-style: none;
+}
+
+.main-menu a {
+	color: var(--wp--preset--color--white);
+	border-bottom: 1px solid transparent;
+	text-decoration: none;
+}
+
+.main-menu li {
+	display: inline-block;
+	line-height: 1.25;
+	margin-right: 3rem;
+}
+
+.main-menu li:last-of-type {
+	margin-right: 0;
+}
+
+.main-menu .current-menu-item > a,
+.main-menu a:hover {
+	border-bottom-color: #fff;
+}
+
+
 
 .site-footer {
 	display: flex;
@@ -1283,10 +1301,6 @@ input.search-field::-moz-placeholder {
 
 @media (max-width: 760px) {
 
-	.site-nav .menus > ul + ul {
-		margin: 40px 0 0;
-	}
-
 	/* When content smaller than max, give some padding,
 	   so not against the ege of the screen. Particularly needed
 	   for comments which has a background color we do want to go
@@ -1301,32 +1315,6 @@ input.search-field::-moz-placeholder {
 	.comment-author .avatar {
 		left: 0;
 		width: 55px;
-	}
-
-	.site-description {
-		display: none;
-	}
-
-	.site-nav {
-		padding-top: 124px;
-		padding-bottom: 40px;
-	}
-
-	.site-nav ul:first-child li {
-		font-size: 1.5556rem;
-	}
-
-	.site-nav ul + ul li {
-		font-size: 1.111rem;
-		font-weight: 400;
-	}
-
-	.site-nav ul + ul li + li {
-		margin-top: 10px;
-	}
-
-	.site-nav footer {
-		display: none;
 	}
 
 	.entry-header {
