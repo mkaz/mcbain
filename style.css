@@ -1,7 +1,7 @@
 /*
 	Theme Name: McBain
     Text Domain: mcbain
-	Version: 1.4.1
+	Version: 1.4.2
 	Description: McBain is a fork of McLuhan by Anders Norén https://www.andersnoren.se
 	Author: Marcus Kazmierczak
 	Author URI: https://mkaz.blog/
@@ -278,6 +278,7 @@ pre {
 
 pre.wp-block-code {
 	margin-bottom: 2rem;
+	overflow: inherit !important;
 }
 
 fieldset {
@@ -319,7 +320,7 @@ textarea {
 	display: block;
 	font-size: 1em;
 	margin: 0 0 15px 0;
-	padding: 15px;
+	padding: 8px;
 	transition: border-color 0.15s linear;
 	-webkit-appearance: none;
 	width: 100%;
@@ -401,9 +402,15 @@ tbody > tr:nth-child(odd) {
 	background: rgba(0, 0, 4, 0.05);
 }
 
+.wp-block-quote {
+	border-left: 4px solid var(--wp--preset--color--orange);
+	padding-left: 4%;
+	padding-right: 8%;
+}
+
 blockquote cite {
 	display: block;
-	color: var(--wp--preset--color--gray);
+	color: var(--wp--preset--color--dark-gray);
 	font-size: var(--wp--preset--font-size--small);
 	font-style: normal;
 	margin-top: 1em;
@@ -569,6 +576,8 @@ input:checked ~ .flipper > .bar2 {
 	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
+	display: flex;
+	justify-content: space-around;
 }
 
 .widget h3 {
@@ -576,7 +585,7 @@ input:checked ~ .flipper > .bar2 {
 	margin-top: 0;
 	margin-bottom: 16px;
 	text-decoration: underline;
-	text-decoration-skip: edges;
+	text-decoration-skip-ink: auto;
 }
 
 .widget ul {
@@ -633,7 +642,37 @@ h3.section-title a:visited {
 	border-bottom-color: #fff;
 }
 
+/* Widgets Table of Contents for Page Tutorial */
+@media (min-width: 1080px) {
+	.page-template-page-tut #widgets {
+		display: block;
+		background-color: var(--wp--preset--color--white);
+		color: var(--wp--preset--color--black);
+		float: left;
+		width: 160px;
+		margin-top: 6rem;
+		margin-left:  calc(50% - var(--mkaz--layout--content-size)*0.5 - 220px);
+		margin-right: 16px;
+	}
+	
+	.page-template-page-tut #widgets h3 {
+		font-size: 1.0rem;
+		margin: 0 0 0 -1rem;
+		border-bottom: 1px solid var(--wp--preset--color--dark-gray);
+	}
 
+	.page-template-page-tut #widgets ul {
+		margin-left: 0;
+		padding-left: 0;
+	}
+
+	.page-template-page-tut #widgets li a {
+		font-size: 0.8889rem;
+		color: var(--wp--preset--color--black);
+		border-bottom: 1px solid transparent;
+		text-decoration: none;
+	}
+}
 
 .site-footer {
 	display: flex;
@@ -673,7 +712,13 @@ h3.section-title a:visited {
 
 
 .page-header {
-	padding: 2.0rem 0 1.5rem 0;
+	max-width: var(--mkaz--layout--content-size);
+	margin-left: auto;
+	margin-right: auto;
+	padding: 2.0rem 0 2rem 0;
+	margin-bottom: 2rem;
+	border-bottom: 1px solid var(--wp--preset--color--gray);
+
 }
 
 .page-header:last-child {
@@ -851,10 +896,12 @@ table.meta td {
 }
 
 .post-pagination {
+	max-width: var(--mkaz--layout--content-size);
+	margin: 5rem auto 5rem auto;
 	display: flex;
 	font-size: 1rem;
 	justify-content: space-between;
-	margin-top: 100px;
+	
 }
 
 .post-pagination div {
@@ -1054,32 +1101,44 @@ article .entry-content {
 }
 
 input.search-field {
-	background: url(./assets/images/spyglass-white.svg) no-repeat left center;
+	background: url(./assets/images/spyglass-black.svg) no-repeat left center;
 	background-size: 26px auto;
-	border: none;
-	border-bottom: 1px solid #ffffff;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	border-bottom: 1px solid #121212;
+	outline: none;
+	color: #121212;
 	border-radius: 0;
 	box-shadow: none;
-	color: #ffffff;
 	font-size: 1em;
 	margin: 0;
-	outline: none;
 	width: 80%;
-	padding: 18px 0 18px 40px;
+	padding: 18px 8px 18px 40px;
 	-moz-appearance: none;
 	-webkit-appearance: none;
 }
 
 input.search-field::-webkit-input-placeholder {
-	color: #ffffff;
-}
-input.search-field:-ms-input-placeholder {
-	color: #ffffff;
-}
-input.search-field::-moz-placeholder {
-	color: #ffffff;
+	color:  var(--wp--preset--color--dark-gray);
 }
 
+input.search-field:-ms-input-placeholder {
+	color:  var(--wp--preset--color--dark-gray);
+}
+
+input.search-field::-moz-placeholder {
+	color:  var(--wp--preset--color--dark-gray);
+}
+
+.wp-block-search .wp-block-search__button {
+	max-height: 2.0rem;
+}
+
+.wp-block-search .wp-block-search__button:hover {
+	background-color: var(--wp--preset--color--orange);
+	color: var(--wp--preset--color--white);
+}
 
 
 /* Comments */

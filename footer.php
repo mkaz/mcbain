@@ -14,7 +14,7 @@
 				const widgets = document.getElementById('widgets');
 				widgets.classList.toggle("visible");
 			} );
-
 		</script>
+
 	</body>
 </html>

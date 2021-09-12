@@ -118,10 +118,10 @@
                     }
                 },
                 "border": {
-                    "left": "solid 2px var(--wp--preset--wp--preset--color--orange)"
+                    "left": "2px solid var(--wp--preset--color--orange)"
                 },
                 "color": {
-                    "text": "var(--wp--preset--color--orange)"
+                    "text": "var(--wp--preset--color--dark-blue)"
                 }
             }
         },
