@@ -1,7 +1,7 @@
 /*
 	Theme Name: McBain
 	Text Domain: mcbain
-	Version: 1.4.4
+	Version: 1.4.5
 	Description: McBain is a fork of McLuhan by Anders Norén https://www.andersnoren.se
 	Author: Marcus Kazmierczak
 	Author URI: https://mkaz.blog/
@@ -447,6 +447,8 @@ figcaption {
 
 .site-branding {
 	margin-right: 2rem;
+	max-width: 320px;
+	width: 100%;
 }
 
 .site-title,
@@ -467,7 +469,7 @@ figcaption {
 }
 
 .site-logo {
-	max-width: 360px;
+	max-width: 320px;
 	width: 100%;
 }
 
@@ -560,6 +562,7 @@ input:checked ~ .flipper > .bar2 {
 	justify-content: space-around;
 }
 
+.widget h5,
 .widget h3 {
 	font-size: var(--wp--preset--font-size--normal);
 	margin-top: 0;
