@@ -133,7 +133,8 @@ body {
 	border: none;
 	color: var(--wp--preset--color--black);
 	font-size: 1rem;
-	font-family: "IBM Plex Sans", "Noto Sans", sans-serif;
+	font-family: "IBM Plex Sans", "Noto Sans", -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+
 }
 
 body * {
@@ -239,8 +240,7 @@ li {
 
 pre,
 code {
-	font-family: Hack, SFMono-Regular, Consolas, "Liberation Mono", Menlo, Inconsolata,
-		"Courier New", monospace;
+	font-family: Hack, SFMono-Regular, Consolas, "Liberation Mono", Menlo, Inconsolata, "Courier New", monospace;
 }
 
 .entry-content :not(pre) code {

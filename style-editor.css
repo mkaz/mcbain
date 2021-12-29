@@ -4,7 +4,7 @@
 
 body {
 	color: #121212;
-	font-family: "Noto Serif", "PT Serif", "Droid Serif", Georgia, serif;
+	font-family: "IBM Plex Sans", "Noto Sans", -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
 	font-size: 18px;
 	font-weight: 400;
 }

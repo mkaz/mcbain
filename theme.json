@@ -103,7 +103,7 @@
 		"custom": {
 			"bold-weight": "700",
 			"normal-weight": "400",
-			"font-family": "'IBM Plex Sans', 'Noto Sans', sans-serif",
+			"font-family": "'IBM Plex Sans','Noto Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif",
 			"content-size": "720px",
             "wide-size": "960px",
 	        "color-link": "#0044CC"

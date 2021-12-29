@@ -11,12 +11,6 @@ add_action( 'after_setup_theme', function() {
 		$content_width = 560;
 	}
 
-	// Post thumbnail support
-	add_theme_support( 'post-thumbnails' );
-
-	// Post thumbnail size
-	set_post_thumbnail_size( 1200, 9999 );
-
 	// Custom image sizes
 	add_image_size( 'mcbain_preview-image', 600, 9999 );
 
@@ -50,36 +44,8 @@ add_filter( 'query_vars', function( $vars ) {
 --------------------------------------------------------------------------------------------------- */
 
 add_action( 'wp_enqueue_scripts', function() {
-
-	$dependencies = array();
 	$theme_version = wp_get_theme( 'mcbain' )->get( 'Version' );
-
-	wp_enqueue_style(
-		'mcbain-font-style',
-		'https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap'
-	);
-
-	wp_enqueue_style( 'mcbain-style', get_template_directory_uri() . '/style.css', $dependencies, $theme_version );
-} );
-
-
-add_action( 'wp_enqueue_scripts', function() {
-
-	$theme_version = wp_get_theme( 'mcbain' )->get( 'Version' );
-
-	// Enqueue comment reply
-	if ( ( ! is_admin() ) && is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
-
-	global $wp_query;
-
-	// AJAX PAGINATION
-	wp_localize_script( 'mcbain_global', 'mcbain_ajaxpagination', array(
-		'ajaxurl'		=> admin_url( 'admin-ajax.php' ),
-		'query_vars'	=> wp_json_encode( $wp_query->query ),
-	) );
-
+	wp_enqueue_style( 'mcbain-style', get_template_directory_uri() . '/style.css', array(), $theme_version );
 } );
 
 
@@ -352,7 +318,6 @@ if ( ! function_exists( 'mcbain_comment' ) ) :
 
 	}
 endif; // End if().
-
 
 
 /* Block Editor Features ------------- */
